@@ -1,4 +1,4 @@
-const translationsES = {
+const Es = {
     "nav": {
         "home": "Inicio",
         "features": "Características",

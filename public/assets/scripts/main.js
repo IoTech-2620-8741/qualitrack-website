@@ -19,7 +19,7 @@ function flattenTranslations(obj, prefix) {
 
 function applyTranslations(lang) {
     // Pick the correct global translation object
-    var source = lang === 'en' ? translationsEN : translationsES;
+    var source = lang === 'en' ? En : Es;
     var flat = flattenTranslations(source);
 
     // Apply to [data-i18n]
