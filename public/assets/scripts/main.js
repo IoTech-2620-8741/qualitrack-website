@@ -1,7 +1,7 @@
 // ---- QualiTrack – main.js ----
 // Language switching with nested dot-notation keys (e.g. "nav.home")
 
-let currentLang = localStorage.getItem('qs-lang') || 'es';
+let currentLang = localStorage.getItem('qs-lang') || 'en';
 
 // Flatten nested object: { "nav": { "home": "Inicio" } } → { "nav.home": "Inicio" }
 function flattenTranslations(obj, prefix) {
