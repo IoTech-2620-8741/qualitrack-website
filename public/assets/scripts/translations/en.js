@@ -99,8 +99,8 @@ const En = {
         },
         "plans": {
             "button": "Plans",
-            "heading1": "Choose the Plan",
-            "heading2": "that Fits Your Laboratory",
+            "headingLead": "Choose the Plan",
+            "headingMain": "that Fits Your Laboratory",
             "monthly": "Monthly",
             "annually": "Annually",
             "save": "Save 15% annually",
@@ -143,14 +143,18 @@ const En = {
         },
         "testimonials": {
             "heading": "What our users are saying",
-            "review1": "\"QualiTrack cut our DIGEMID audit preparation from 3 weeks to just 2 days. The immutable records and digital signatures are exactly what we needed.\"",
-            "review2": "\"The IoT integration with our autoclaves was surprisingly smooth. Deviations that used to go undetected for hours are now flagged in seconds. A game changer.\"",
-            "review3": "\"We finally passed our DIGEMID inspection with zero observations on data integrity. QualiTrack's audit trail is incredibly robust and easy to present.\""
-        },
-        "testimonials_authors": {
-            "review1": "— Patricia N., QA Manager, AC Farma",
-            "review2": "— Fredd P., Lab Supervisor, INS",
-            "review3": "— Delcy C., Sub-Director, Radiopharmaceuticals Plant"
+            "patricia": {
+                "review": "\"QualiTrack cut our DIGEMID audit preparation from 3 weeks to just 2 days. The immutable records and digital signatures are exactly what we needed.\"",
+                "author": "— Patricia N., QA Manager, AC Farma"
+            },
+            "fredd": {
+                "review": "\"The IoT integration with our autoclaves was surprisingly smooth. Deviations that used to go undetected for hours are now flagged in seconds. A game changer.\"",
+                "author": "— Fredd P., Lab Supervisor, INS"
+            },
+            "delcy": {
+                "review": "\"We finally passed our DIGEMID inspection with zero observations on data integrity. QualiTrack's audit trail is incredibly robust and easy to present.\"",
+                "author": "— Delcy C., Sub-Director, Radiopharmaceuticals Plant"
+            }
         },
         "cta": {
             "heading": "Ready to digitize your laboratory's quality management?",
