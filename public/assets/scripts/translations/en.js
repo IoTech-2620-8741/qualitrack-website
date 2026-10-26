@@ -182,5 +182,132 @@ const En = {
                 "terms": "Terms of Service",
                 "privacy": "Privacy Policy"
             }
+            
+        },
+        "policies": {
+            "button": "← Go Back",
+            "title": "Privacy Policy",
+            "update": "Last Update: October 2026",
+            "description": `At <strong>QualiTrack</strong>, developed by
+            <strong>IoTech</strong>, we are committed to protecting the
+            privacy and personal data of our users. This Privacy Policy
+            explains what information we collect, how we use it, and what
+            rights you have regarding your data, in accordance with
+            <strong>Law No. 29733, the Personal Data Protection Law
+            of Peru</strong>, and its regulations.`,
+            "dataController": {
+                "title": "1. Data Controller",
+                "content": `The entity responsible for the processing of personal data is
+            <strong>IoTech</strong>, based in Lima, Peru. For inquiries regarding the processing of your data, you may
+            contact us at: <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>`
+            },
+            "collectedData": {
+                "title": "2. Personal Data We Collect",
+                "content": {
+                    "description": "QualiTrack collects the following types of personal data:",
+                    "registration": `<strong>Registration details:</strong> full name, institutional email address, job title, phone number, and laboratory information (name, RUC, address).`,
+                    "usage": `<strong>Usage data:</strong> actions performed within the platform, timestamps, modules accessed, and system audit logs.`,
+                    "telemetry": `<strong>Operational telemetry data:</strong> critical variables for industrial equipment (temperature, pressure, pH) and production batch records. This is operational data from the laboratory, not personal data.`,
+                    "technical": `<strong>Technical data:</strong> IP address, browser type, operating system, and session data to ensure the security of the platform.`,
+                    "communications": `<strong>Communications:</strong> messages sent via the contact form or email.`
+                }
+            },
+            "purposes": {
+                "title": "3. Purposes of the Processing",
+                "content": {
+                    "description": "The personal data collected are processed for:",
+                    "serviceProvision": "Provisioning and management of the QualiTrack SaaS service, including the contracted functionalities.",
+                    "authentication": "User authentication and role-based access control (RBAC).",
+                    "auditLogs": "Generation of audit logs and action history for regulatory compliance (Data Integrity).",
+                    "notifications": "Sending operational notifications, deviation alerts, and service-related communications.",
+                    "support": "Handling of inquiries, technical support, and commercial contact requests.",
+                    "billing": "Billing and subscription management.",
+                    "improvement": "Continuous improvement of the platform through aggregated and anonymized usage analysis.",
+                    "legalCompliance": "Compliance with applicable legal and regulatory obligations."
+                }
+            },
+            "legalBasis": {
+                "title": "4. Legal Basis for Processing",
+                "content": {
+                    "description": "The processing of your personal data is based on:",
+                    "contract": `<strong>Contractual execution:</strong> for the provision of the contracted SaaS service.`,
+                    "consent": `<strong>Consent:</strong> for commercial communications and service improvement.`,
+                    "legitimateInterest": `<strong>Legitimate interest:</strong> to ensure the security of the platform and prevent fraud.`,
+                    "legalObligation": `<strong>Legal obligation:</strong> for compliance with regulations applicable within Peruvian territory.`
+                }
+            },
+            "security": {
+                "title": "5. Data Security",
+                "content": {
+                    "description": "QualiTrack implements appropriate technical and organizational measures to protect data, including:",
+                    "encryptionInTransit": "Encryption in transit via TLS/HTTPS for all communications.",
+                    "encryptionAtRest": "Encryption at rest for sensitive data stored in the database.",
+                    "accessControl": "Role-based access control (RBAC) with two-factor authentication available.",
+                    "auditLog": "Immutable audit log of all access to and actions taken on critical data.",
+                    "securityTesting": "Periodic security assessments and penetration testing.",
+                    "backups": "Daily encrypted backups."
+                }
+            },
+            "retention": {
+                "title": "6. Data Retention",
+                "content": {
+                    "description": "Personal data is retained for the time strictly necessary for the purposes described:",
+                    "activeAccount": `<strong>Active account data:</strong> throughout the entire term of the subscription agreement.`,
+                    "batchRecords": `<strong>Operational batch records:</strong> in accordance with the retention periods required by DIGEMID (a minimum of 5 years for pharmaceutical records).`,
+                    "auditLogs": `<strong>Audit logs:</strong> minimum of 5 years to comply with Data Integrity requirements.`,
+                    "billing": `<strong>Billing data:</strong> in accordance with current tax obligations (7 years).`,
+                    "conclusion": "Following account cancellation, the data will be deleted or anonymized within 60 days, unless there is a legal obligation to retain it."
+                }
+            },
+            "thirdParties": {
+                "title": "7. Sharing Data with Third Parties",
+                "content": {
+                    "description": "QualiTrack does not sell, rent, or share personal data with third parties for their own commercial purposes. Data may be shared with:",
+                    "techProviders": `<strong>Technology service providers:</strong> providers of cloud hosting, email services, and monitoring tools, who act as data processors under confidentiality agreements.`,
+                    "regulators": `<strong>Regulatory authorities:</strong> when required by legal or regulatory mandate (e.g., DIGEMID, Ministry of Health, INDECOPI).`,
+                    "auditors": `<strong>External auditors:</strong> in the context of certification or regulatory audit processes, with the consent of the user laboratory.`
+                }
+            },
+            "internationalTransfers": {
+                "title": "8. International Data Transfers",
+                "content": "QualiTrack may use cloud infrastructure providers with servers located outside of Peru. In such cases, it is ensured that these transfers are carried out in compliance with the requirements of Law No. 29733 and only to countries or entities that offer an adequate level of data protection."
+            },
+            "rights": {
+                "title": "9. Rights of the Data Subject",
+                "content": {
+                    "description": "In accordance with Law No. 29733, you have the following rights:",
+                    "access": `<strong>Right of access:</strong> to know what personal data of yours we process and the purpose for doing so.`,
+                    "rectification": `<strong>Right to rectification:</strong> to correct inaccurate or incomplete data.`,
+                    "erasure": `<strong>Right to erasure:</strong> to request the deletion of your data when it is no longer necessary.`,
+                    "objection": `<strong>Right to object:</strong> to object to the processing of your data in certain circumstances.`,
+                    "portability": `<strong>Right to data portability:</strong> to receive your data in a structured, machine-readable format.`,
+                    "conclusion": `To exercise any of these rights, please send a request to
+            <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>
+            including your full name, registered email address, and a description of your
+            request. We will respond within a maximum of 15 business days.`
+                }
+            },
+            "cookies": {
+                "title": "10. Cookies and Tracking Technologies",
+                "content": "QualiTrack uses technical cookies that are strictly necessary for the platform to function (such as session management and language preferences). We do not use advertising tracking cookies, nor do we share browsing data with advertising networks. You can manage your cookie preferences through your browser settings."
+            },
+            "minors": {
+                "title": "11. Minors",
+                "content": "QualiTrack is a platform intended exclusively for professionals in the pharmaceutical and healthcare sectors. We do not intentionally collect personal data from individuals under the age of 18. If we become aware that we have received data from a minor, we will delete it immediately."
+            },
+            "updates": {
+                "title": "12. Updates to this Policy",
+                "content": "QualiTrack may update this Privacy Policy periodically to reflect changes in our practices or in applicable regulations. Significant modifications will be notified via email at least 30 days in advance."
+            },
+            "privacyContact": {
+                "title": "13. Contact — Privacy Officer",
+                "content": {
+                    "description": "For inquiries, complaints, or requests regarding the processing of your personal data:",
+                    "email": `<strong>Email:</strong> <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>`,
+                    "postal": `<strong>Postal address:</strong> Lima, Peru`,
+                    "conclusion": `You also have the right to file a complaint with the <strong>National Authority for the Protection of Personal Data (ANPD)</strong> of the Ministry of Justice of Peru if you believe that the processing of your data violates applicable regulations.`
+                }
+            }
         }
+        
     };
