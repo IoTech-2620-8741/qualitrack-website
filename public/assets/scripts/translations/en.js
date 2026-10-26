@@ -55,21 +55,21 @@ const En = {
         },
         "benefits": {
             "button": "Benefits",
-            "heading1": "The QualiTrack Advantage:",
-            "heading2": "Benefits for a New Era of Pharmaceutical Manufacturing",
-            "card1": {
+            "headingLead": "The QualiTrack Advantage:",
+            "headingMain": "Benefits for a New Era of Pharmaceutical Manufacturing",
+            "auditReduction": {
                 "title": "80% Reduction in Audit Preparation",
                 "text": "Forget spending weeks collecting paper documents. QualiTrack generates immutable, inspection-ready PDF reports in seconds, drastically cutting the time spent preparing for DIGEMID audits and regulatory inspections."
             },
-            "card2": {
+            "zeroHumanError": {
                 "title": "Zero Human Error in Records",
                 "text": "By automating the capture of critical variables (temperature, pressure, pH) through IoT sensors, QualiTrack eliminates transcription errors, protecting data integrity and ensuring every batch record is accurate and complete."
             },
-            "card3": {
+            "deviationDetection": {
                 "title": "Instant Deviation Detection",
                 "text": "No more relying on operators visually noticing equipment failures. QualiTrack detects deviations and triggers blocking alerts in under 5 seconds, preventing defective batches from advancing in the supply chain."
             },
-            "card4": {
+            "scalableSaas": {
                 "title": "Scalable SaaS — No Infrastructure Costs",
                 "text": "No servers to buy, no complex installations. QualiTrack is a cloud-based SaaS platform that allows laboratories to start immediately with a monthly or annual subscription, scaling as their needs grow."
             }
