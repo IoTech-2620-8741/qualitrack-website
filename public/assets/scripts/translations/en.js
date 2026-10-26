@@ -166,13 +166,13 @@ const En = {
                 "placeholder": "Enter your work email",
                 "button": "Subscribe"
             },
-            "links1": {
+            "product": {
                 "heading": "Product",
                 "link1": "Features",
                 "link2": "Pricing Plans",
                 "link3": "How It Works"
             },
-            "links2": {
+            "contact": {
                 "heading": "Contact",
                 "phone": "+51 (1) 234-5678",
                 "location": "Lima, Perú"
