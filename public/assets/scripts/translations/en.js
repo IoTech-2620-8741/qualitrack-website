@@ -76,13 +76,13 @@ const En = {
         },
         "about": {
             "button": "About Us",
-            "heading1": "QualiTrack:",
-            "heading2": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
-            "p1": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
-            "p2": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
-            "list1": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
-            "list2": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
-            "list3": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
+            "headingLead": "QualiTrack:",
+            "headingMain": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
+            "vision": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
+            "mission": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
+            "iotIntegration": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
+            "traceability": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
+            "compliance": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
         },
         "team": {
             "heading": "Our Team",
