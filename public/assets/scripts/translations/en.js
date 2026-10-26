@@ -34,21 +34,21 @@ const En = {
     },
     "features": {
             "button": "Features",
-            "heading1": "The Key Features",
-            "heading2": "of Our Platform",
-            "accordion1": {
+            "headingLead": "The Key Features",
+            "headingMain": "of Our Platform",
+            "iotTelemetry": {
                 "title": "IoT Telemetry Integration",
                 "text": "Connect industrial sensors directly to QualiTrack. Autoclaves, pH meters, and pressure gauges transmit data in real time, eliminating manual transcription and the human errors associated with it."
             },
-            "accordion2": {
+            "complianceEngine": {
                 "title": "BPM Compliance Engine",
                 "text": "Our engine evaluates each measurement against the configured BPM parameters in real time. When a deviation is detected, the system automatically blocks the affected batch and notifies the responsible QA supervisor in under 5 seconds."
             },
-            "accordion3": {
+            "deviationAlerts": {
                 "title": "Instant Deviation Alerts",
                 "text": "Receive push notifications, email, or SMS when a critical variable goes out of range. React in under 5 seconds even when not actively reviewing the platform. Never miss a deviation that could compromise patient safety."
             },
-            "accordion4": {
+            "kpiDashboard": {
                 "title": "Analytics & KPI Dashboard",
                 "text": "Track batch conformance rates, deviation trends, and release times. Identify recurring failure patterns and prioritize corrective actions. Generate regulatory-ready reports for DIGEMID inspections with a single click."
             }
