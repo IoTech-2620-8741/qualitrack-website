@@ -15,294 +15,168 @@ const En = {
     },
     "services": {
         "heading": "What we offer",
-        "card1": {
+        "iotMonitoring": {
             "title": "Real-Time IoT Monitoring",
             "text": "Connect autoclaves, pH meters, and other industrial equipment. Capture temperature, pressure, and pH data automatically — no manual entry. Eliminate human error from critical records."
         },
-        "card2": {
+        "bpmCompliance": {
             "title": "Automated BPM Compliance",
             "text": "Configure acceptable ranges for each piece of equipment. Our compliance engine evaluates every measurement and instantly blocks non-conforming batches, preventing unsafe products from reaching the supply chain."
         },
-        "card3": {
+        "auditTrails": {
             "title": "Immutable Audit Trails",
             "text": "Every action is timestamped and immutable. Generate PDF audit reports in seconds — not days — for DIGEMID inspections. Keep your laboratory always ready for regulatory audits."
         },
-        "card4": {
+        "batchManagement": {
             "title": "Digital Batch Management",
             "text": "Manage the complete lifecycle of each production batch with digital signatures for lot release. Full traceability from raw materials to distribution in a single integrated platform."
         }
     },
     "features": {
-        "button": "Features",
-        "heading1": "The Key Features",
-        "heading2": "of Our Platform",
-        "accordion1": {
-            "title": "IoT Telemetry Integration",
-            "text": "Connect industrial sensors directly to QualiTrack. Autoclaves, pH meters, and pressure gauges transmit data in real time, eliminating manual transcription and the human errors associated with it."
-        },
-        "accordion2": {
-            "title": "BPM Compliance Engine",
-            "text": "Our engine evaluates each measurement against the configured BPM parameters in real time. When a deviation is detected, the system automatically blocks the affected batch and notifies the responsible QA supervisor in under 5 seconds."
-        },
-        "accordion3": {
-            "title": "Instant Deviation Alerts",
-            "text": "Receive push notifications, email, or SMS when a critical variable goes out of range. React in under 5 seconds even when not actively reviewing the platform. Never miss a deviation that could compromise patient safety."
-        },
-        "accordion4": {
-            "title": "Analytics & KPI Dashboard",
-            "text": "Track batch conformance rates, deviation trends, and release times. Identify recurring failure patterns and prioritize corrective actions. Generate regulatory-ready reports for DIGEMID inspections with a single click."
-        }
-    },
-    "benefits": {
-        "button": "Benefits",
-        "heading1": "The QualiTrack Advantage:",
-        "heading2": "Benefits for a New Era of Pharmaceutical Manufacturing",
-        "card1": {
-            "title": "80% Reduction in Audit Preparation",
-            "text": "Forget spending weeks collecting paper documents. QualiTrack generates immutable, inspection-ready PDF reports in seconds, drastically cutting the time spent preparing for DIGEMID audits and regulatory inspections."
-        },
-        "card2": {
-            "title": "Zero Human Error in Records",
-            "text": "By automating the capture of critical variables (temperature, pressure, pH) through IoT sensors, QualiTrack eliminates transcription errors, protecting data integrity and ensuring every batch record is accurate and complete."
-        },
-        "card3": {
-            "title": "Instant Deviation Detection",
-            "text": "No more relying on operators visually noticing equipment failures. QualiTrack detects deviations and triggers blocking alerts in under 5 seconds, preventing defective batches from advancing in the supply chain."
-        },
-        "card4": {
-            "title": "Scalable SaaS — No Infrastructure Costs",
-            "text": "No servers to buy, no complex installations. QualiTrack is a cloud-based SaaS platform that allows laboratories to start immediately with a monthly or annual subscription, scaling as their needs grow."
-        }
-    },
-    "about": {
-        "button": "About Us",
-        "heading1": "QualiTrack:",
-        "heading2": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
-        "p1": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
-        "p2": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
-        "list1": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
-        "list2": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
-        "list3": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
-    },
-    "team": {
-        "heading": "Our Team",
-        "role": "Software Engineer",
-        "member1": "22 years old. A calm, collaborative, and adaptable person who enjoys working as a team, contributing ideas and solutions. I have knowledge in C++, Python, and software development, and I always look for efficient ways to do things while learning new technologies.",
-        "member2": "21 years old. A calm, collaborative, and adaptable person who looks for efficient solutions. I have knowledge in backend development with Java and Node.js, mobile development with Flutter and Kotlin, UX/UI design, and Domain-Driven Design.",
-        "member3": "A responsible, punctual, and adaptable student passionate about designing innovative solutions. I have knowledge in software architecture (monolith and microservices), Domain-Driven Design, and web and mobile development, both frontend and backend.",
-        "member4": "Software Engineering student passionate about creating technological solutions. My approach goes beyond programming — I'm interested in developing digital experiences that are both functional and enjoyable. I have knowledge in C++, HTML, and CSS.",
-        "member5": "20 years old. I like supporting my team, especially in difficult moments. I have knowledge in C++, C#, Java, and Python, as well as front-end and back-end development. I enjoy learning new technologies and topics about the tech world.",
-        "member6": "A responsible and committed student, always willing to learn. I have knowledge in C++, Python, JavaScript, TypeScript, Kotlin, React, Flutter, and .NET, plus experience with PostgreSQL, MySQL, and SQLite. I enjoy teamwork and sharing ideas.",
-        "member7": "An organized, analytical, and committed person. I have knowledge in Java, Python, and C++, backend and mobile development, the C4 model, and Domain-Driven Design. Intern at Abbott Laboratories, building end-to-end data pipelines.",
-        "member8": "20 years old. A responsible, organized student eager to keep learning. I have knowledge in Java, Spring Boot, databases, and Git. I enjoy teamwork, listening to different points of view, and supporting my teammates.",
-        "member9": "Software Engineering student at UPC, responsible and committed, with good communication for teamwork. I have experience with C++, Python, HTML, CSS, and MongoDB, and some knowledge of JavaScript, TypeScript, and Java.",
-    },
-    "plans": {
-        "button": "Plans",
-        "heading1": "Choose the Plan",
-        "heading2": "that Fits Your Laboratory",
-        "monthly": "Monthly",
-        "annually": "Annually",
-        "save": "Save 15% annually",
-        "features_heading": "Features",
-        "standard": {
-            "title": "Standard Lab Plan",
-            "description": "Designed for private pharmaceutical laboratories of medium size seeking to digitize their quality assurance processes, eliminate manual records, and ensure BPM compliance with DIGEMID.",
-            "price": {
-                "monthly": "$199",
-                "monthly_unit": "/Per month",
-                "annually": "$1,990",
-                "annually_unit": "/Per year"
+            "button": "Features",
+            "heading1": "The Key Features",
+            "heading2": "of Our Platform",
+            "accordion1": {
+                "title": "IoT Telemetry Integration",
+                "text": "Connect industrial sensors directly to QualiTrack. Autoclaves, pH meters, and pressure gauges transmit data in real time, eliminating manual transcription and the human errors associated with it."
             },
-            "cta": "Get Standard Plan",
-            "feature1": "Up to 5 connected IoT devices (autoclaves, pH meters, sensors).",
-            "feature2": "Real-time telemetry dashboard with historical charts.",
-            "feature3": "Digital batch record management with immutable history.",
-            "feature4": "Automated deviation alerts and batch blocking engine.",
-            "feature5": "Audit traceability PDF reports by batch or period.",
-            "feature6": "Up to 10 user accounts with role-based access control."
-        },
-        "enterprise": {
-            "title": "Enterprise Plan",
-            "description": "The comprehensive solution for large pharmaceutical institutions and public health entities such as the INS, requiring advanced integration, scalability, and the highest standard of regulatory compliance.",
-            "price": {
-                "monthly": "$599",
-                "monthly_unit": "/Per month",
-                "annually": "$5,990",
-                "annually_unit": "/Per year"
+            "accordion2": {
+                "title": "BPM Compliance Engine",
+                "text": "Our engine evaluates each measurement against the configured BPM parameters in real time. When a deviation is detected, the system automatically blocks the affected batch and notifies the responsible QA supervisor in under 5 seconds."
             },
-            "cta": "Get Enterprise Plan",
-            "feature1": "Unlimited IoT device connections across multiple production lines.",
-            "feature2": "All Standard Plan features included.",
-            "feature3": "Multi-site management with centralized compliance dashboard.",
-            "feature4": "Advanced KPI analytics and deviation trend analysis.",
-            "feature5": "Raw material traceability and calibration management module.",
-            "feature6": "API integration with external laboratory systems (LIMS).",
-            "feature7": "Dedicated onboarding, implementation support, and priority SLA."
-        }
-    },
-    "testimonials": {
-        "heading": "What our users are saying",
-        "review1": "\"QualiTrack cut our DIGEMID audit preparation from 3 weeks to just 2 days. The immutable records and digital signatures are exactly what we needed.\"",
-        "review2": "\"The IoT integration with our autoclaves was surprisingly smooth. Deviations that used to go undetected for hours are now flagged in seconds. A game changer.\"",
-        "review3": "\"We finally passed our DIGEMID inspection with zero observations on data integrity. QualiTrack's audit trail is incredibly robust and easy to present.\""
-    },
-    "testimonials_authors": {
-        "review1": "— Patricia N., QA Manager, AC Farma",
-        "review2": "— Fredd P., Lab Supervisor, INS",
-        "review3": "— Delcy C., Sub-Director, Radiopharmaceuticals Plant"
-    },
-    "cta": {
-        "heading": "Ready to digitize your laboratory's quality management?",
-        "button": "Get Started"
-    },
-    "footer": {
-        "subscribe": {
-            "heading": "Stay Updated on Regulatory Compliance",
-            "placeholder": "Enter your work email",
-            "button": "Subscribe"
-        },
-        "links1": {
-            "heading": "Product",
-            "link1": "Features",
-            "link2": "Pricing Plans",
-            "link3": "How It Works"
-        },
-        "links2": {
-            "heading": "Contact",
-            "phone": "+51 (1) 234-5678",
-            "location": "Lima, Perú"
-        },
-        "copyright": "Copyright © 2026 IoTech",
-        "legal": {
-            "terms": "Terms of Service",
-            "privacy": "Privacy Policy"
-        }
-    },
-    "policies":{
-        "button": "← Go Back",
-        "title": "Privacy Policy",
-        "update": "Last Update: October 2026",
-        "description": `At <strong>QualiTrack</strong>, developed by
-        <strong>IoTech</strong>, we are committed to protecting the
-        privacy and personal data of our users. This Privacy Policy
-        explains what information we collect, how we use it, and what
-        rights you have regarding your data, in accordance with
-        <strong>Law No. 29733, the Personal Data Protection Law
-        of Peru</strong>, and its regulations.`,
-        "policy1":{
-            "title": "1. Responsable of Data Processing",
-            "content": `The entity responsible for the processing of personal data is
-          <strong>IoTech</strong>, based in Lima, Peru. For inquiries regarding the processing of your data, you may
-          contact us at: <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>`
-        },
-        "policy2":{
-            "title":"2. Personal Data We Collect",
-            "content": {
-                "description": "QualiTrack collects the following types of personal data:",
-                "data1": `<strong>Registration details:</strong> full name, institutional email address, job title, phone number, and laboratory information (name, RUC, address).`,
-                "data2": `<strong>Usage data:</strong> actions performed within the platform, timestamps, modules accessed, and system audit logs.`,
-                "data3": `<strong>Operational telemetry data:</strong> critical variables for industrial equipment (temperature, pressure, pH) and production batch records. This is operational data from the laboratory, not personal data.`,
-                "data4": `<strong>Technical data:</strong> IP address, browser type, operating system, and session data to ensure the security of the platform.`,
-                "data5": `<strong>Communications:</strong> messages sent via the contact form or email.`
+            "accordion3": {
+                "title": "Instant Deviation Alerts",
+                "text": "Receive push notifications, email, or SMS when a critical variable goes out of range. React in under 5 seconds even when not actively reviewing the platform. Never miss a deviation that could compromise patient safety."
+            },
+            "accordion4": {
+                "title": "Analytics & KPI Dashboard",
+                "text": "Track batch conformance rates, deviation trends, and release times. Identify recurring failure patterns and prioritize corrective actions. Generate regulatory-ready reports for DIGEMID inspections with a single click."
             }
         },
-        "policy3":{
-            "title": "3. Purposes of the Processing",
-            "content": {
-                "description": "The personal data collected are processed for:",
-                "reason1": "Provisioning and management of the QualiTrack SaaS service, including the contracted functionalities.",
-                "reason2": "User authentication and role-based access control (RBAC).",
-                "reason3": "Generation of audit logs and action history for regulatory compliance (Data Integrity).",
-                "reason4": "Sending operational notifications, deviation alerts, and service-related communications.",
-                "reason5": "Handling of inquiries, technical support, and commercial contact requests.",
-                "reason6": "Billing and subscription management.",
-                "reason7": "Continuous improvement of the platform through aggregated and anonymized usage analysis.",
-                "reason8": "Compliance with applicable legal and regulatory obligations."
+        "benefits": {
+            "button": "Benefits",
+            "heading1": "The QualiTrack Advantage:",
+            "heading2": "Benefits for a New Era of Pharmaceutical Manufacturing",
+            "card1": {
+                "title": "80% Reduction in Audit Preparation",
+                "text": "Forget spending weeks collecting paper documents. QualiTrack generates immutable, inspection-ready PDF reports in seconds, drastically cutting the time spent preparing for DIGEMID audits and regulatory inspections."
+            },
+            "card2": {
+                "title": "Zero Human Error in Records",
+                "text": "By automating the capture of critical variables (temperature, pressure, pH) through IoT sensors, QualiTrack eliminates transcription errors, protecting data integrity and ensuring every batch record is accurate and complete."
+            },
+            "card3": {
+                "title": "Instant Deviation Detection",
+                "text": "No more relying on operators visually noticing equipment failures. QualiTrack detects deviations and triggers blocking alerts in under 5 seconds, preventing defective batches from advancing in the supply chain."
+            },
+            "card4": {
+                "title": "Scalable SaaS — No Infrastructure Costs",
+                "text": "No servers to buy, no complex installations. QualiTrack is a cloud-based SaaS platform that allows laboratories to start immediately with a monthly or annual subscription, scaling as their needs grow."
             }
         },
-        "policy4":{
-            "title": "4. Legal Basis for Processing",
-            "content": {
-                "description": "The processing of your personal data is based on:",
-                "legal1": `<strong>Contractual execution:</strong> for the provision of the contracted SaaS service.`,
-                "legal2": `<strong>Consent:</strong> for commercial communications and service improvement.`,
-                "legal3": `<strong>Legitimate interest:</strong> to ensure the security of the platform and prevent fraud.`,
-                "legal4": `<strong>Legal obligation:</strong> for compliance with regulations applicable within Peruvian territory.`
+        "about": {
+            "button": "About Us",
+            "heading1": "QualiTrack:",
+            "heading2": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
+            "p1": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
+            "p2": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
+            "list1": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
+            "list2": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
+            "list3": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
+        },
+        "team": {
+            "heading": "Our Team",
+            "role": "Software Engineer",
+            "member1": "22 years old. A calm, collaborative, and adaptable person who enjoys working as a team, contributing ideas and solutions. I have knowledge in C++, Python, and software development, and I always look for efficient ways to do things while learning new technologies.",
+            "member2": "21 years old. A calm, collaborative, and adaptable person who looks for efficient solutions. I have knowledge in backend development with Java and Node.js, mobile development with Flutter and Kotlin, UX/UI design, and Domain-Driven Design.",
+            "member3": "A responsible, punctual, and adaptable student passionate about designing innovative solutions. I have knowledge in software architecture (monolith and microservices), Domain-Driven Design, and web and mobile development, both frontend and backend.",
+            "member4": "Software Engineering student passionate about creating technological solutions. My approach goes beyond programming — I'm interested in developing digital experiences that are both functional and enjoyable. I have knowledge in C++, HTML, and CSS.",
+            "member5": "20 years old. I like supporting my team, especially in difficult moments. I have knowledge in C++, C#, Java, and Python, as well as front-end and back-end development. I enjoy learning new technologies and topics about the tech world.",
+            "member6": "A responsible and committed student, always willing to learn. I have knowledge in C++, Python, JavaScript, TypeScript, Kotlin, React, Flutter, and .NET, plus experience with PostgreSQL, MySQL, and SQLite. I enjoy teamwork and sharing ideas.",
+            "member7": "An organized, analytical, and committed person. I have knowledge in Java, Python, and C++, backend and mobile development, the C4 model, and Domain-Driven Design. Intern at Abbott Laboratories, building end-to-end data pipelines.",
+            "member8": "20 years old. A responsible, organized student eager to keep learning. I have knowledge in Java, Spring Boot, databases, and Git. I enjoy teamwork, listening to different points of view, and supporting my teammates.",
+            "member9": "Software Engineering student at UPC, responsible and committed, with good communication for teamwork. I have experience with C++, Python, HTML, CSS, and MongoDB, and some knowledge of JavaScript, TypeScript, and Java.",
+        },
+        "plans": {
+            "button": "Plans",
+            "heading1": "Choose the Plan",
+            "heading2": "that Fits Your Laboratory",
+            "monthly": "Monthly",
+            "annually": "Annually",
+            "save": "Save 15% annually",
+            "features_heading": "Features",
+            "standard": {
+                "title": "Standard Lab Plan",
+                "description": "Designed for private pharmaceutical laboratories of medium size seeking to digitize their quality assurance processes, eliminate manual records, and ensure BPM compliance with DIGEMID.",
+                "price": {
+                    "monthly": "$199",
+                    "monthly_unit": "/Per month",
+                    "annually": "$1,990",
+                    "annually_unit": "/Per year"
+                },
+                "cta": "Get Standard Plan",
+                "feature1": "Up to 5 connected IoT devices (autoclaves, pH meters, sensors).",
+                "feature2": "Real-time telemetry dashboard with historical charts.",
+                "feature3": "Digital batch record management with immutable history.",
+                "feature4": "Automated deviation alerts and batch blocking engine.",
+                "feature5": "Audit traceability PDF reports by batch or period.",
+                "feature6": "Up to 10 user accounts with role-based access control."
+            },
+            "enterprise": {
+                "title": "Enterprise Plan",
+                "description": "The comprehensive solution for large pharmaceutical institutions and public health entities such as the INS, requiring advanced integration, scalability, and the highest standard of regulatory compliance.",
+                "price": {
+                    "monthly": "$599",
+                    "monthly_unit": "/Per month",
+                    "annually": "$5,990",
+                    "annually_unit": "/Per year"
+                },
+                "cta": "Get Enterprise Plan",
+                "feature1": "Unlimited IoT device connections across multiple production lines.",
+                "feature2": "All Standard Plan features included.",
+                "feature3": "Multi-site management with centralized compliance dashboard.",
+                "feature4": "Advanced KPI analytics and deviation trend analysis.",
+                "feature5": "Raw material traceability and calibration management module.",
+                "feature6": "API integration with external laboratory systems (LIMS).",
+                "feature7": "Dedicated onboarding, implementation support, and priority SLA."
             }
         },
-        "policy5":{
-            "title": "5. Data Security",
-            "content": {
-                "description": "QualiTrack implements appropriate technical and organizational measures to protect data, including:",
-                "technique1": "Encryption in transit via TLS/HTTPS for all communications.",
-                "technique2": "Encryption at rest for sensitive data stored in the database.",
-                "technique3": "Role-based access control (RBAC) with two-factor authentication available.",
-                "technique4": "Immutable audit log of all access to and actions taken on critical data.",
-                "technique5": "Periodic security assessments and penetration testing.",
-                "technique6": "Daily encrypted backups."
-            }
+        "testimonials": {
+            "heading": "What our users are saying",
+            "review1": "\"QualiTrack cut our DIGEMID audit preparation from 3 weeks to just 2 days. The immutable records and digital signatures are exactly what we needed.\"",
+            "review2": "\"The IoT integration with our autoclaves was surprisingly smooth. Deviations that used to go undetected for hours are now flagged in seconds. A game changer.\"",
+            "review3": "\"We finally passed our DIGEMID inspection with zero observations on data integrity. QualiTrack's audit trail is incredibly robust and easy to present.\""
         },
-        "policy6":{
-            "title": "6. Data Conservation",
-            "content": {
-                "description": "Personal data is retained for the time strictly necessary for the purposes described:",
-                "reason1": `<strong>Active account data:</strong> throughout the entire term of the subscription agreement.`,
-                "reason2": `<strong>Operational batch records:</strong> in accordance with the retention periods required by DIGEMID (a minimum of 5 years for pharmaceutical records).`,
-                "reason3": `<strong>Audit logs:</strong> minimum of 5 years to comply with Data Integrity requirements.`,
-                "reason4": `<strong>Billing data:</strong> in accordance with current tax obligations (7 years).`,
-                "conclusion": "Following account cancellation, the data will be deleted or anonymized within 60 days, unless there is a legal obligation to retain it."
-            }
+        "testimonials_authors": {
+            "review1": "— Patricia N., QA Manager, AC Farma",
+            "review2": "— Fredd P., Lab Supervisor, INS",
+            "review3": "— Delcy C., Sub-Director, Radiopharmaceuticals Plant"
         },
-        "policy7":{
-            "title": "7. Sharing Data with Third Parties",
-            "content": {
-                "description": "QualiTrack does not sell, rent, or share personal data with third parties for their own commercial purposes. Data may be shared with:",
-                "shared1":`<strong>Technology service providers:</strong> providers of cloud hosting, email services, and monitoring tools, who act as data processors under confidentiality agreements.`,
-                "shared2":`<strong>Regulatory authorities:</strong> when required by legal or regulatory mandate (e.g., DIGEMID, Ministry of Health, INDECOPI).`,
-                "shared3":`<strong>External auditors:</strong> in the context of certification or regulatory audit processes, with the consent of the user laboratory.`,
-
-            }
+        "cta": {
+            "heading": "Ready to digitize your laboratory's quality management?",
+            "button": "Get Started"
         },
-        "policy8":{
-            "title": "8. International Data Transfers",
-            "content": "QualiTrack may use cloud infrastructure providers with servers located outside of Peru. In such cases, it is ensured that these transfers are carried out in compliance with the requirements of Law No. 29733 and only to countries or entities that offer an adequate level of data protection."
-        },
-        "policy9":{
-            "title": "9. Rights of the Data Subject",
-            "content":{
-                "description": "In accordance with Law No. 29733, you have the following rights:",
-                "right1": `<strong>Right of access:</strong> to know what personal data of yours we process and the purpose for doing so.`,
-                "right2": `<strong>Right to rectification:</strong> to correct inaccurate or incomplete data.`,
-                "right3": `<strong>Right to erasure:</strong> to request the deletion of your data when it is no longer necessary.`,
-                "right4": `<strong>Right to object:</strong> to object to the processing of your data in certain circumstances.`,
-                "right5": `<strong>Right to data portability:</strong> to receive your data in a structured, machine-readable format.`,
-                "conclusion": `To exercise any of these rights, please send a request to
-          <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>
-          including your full name, registered email address, and a description of your
-          request. We will respond within a maximum of 15 business days.`
-            }
-        },
-        "policy10":{
-            "title": "10. Cookies and Tracking Technologies",
-            "content": "QualiTrack uses technical cookies that are strictly necessary for the platform to function (such as session management and language preferences). We do not use advertising tracking cookies, nor do we share browsing data with advertising networks. You can manage your cookie preferences through your browser settings."
-        },
-        "policy11":{
-            "title": "11. Minors",
-            "content": "QualiTrack is a platform intended exclusively for professionals in the pharmaceutical and healthcare sectors. We do not intentionally collect personal data from individuals under the age of 18. If we become aware that we have received data from a minor, we will delete it immediately."
-        },
-        "policy12":{
-            "title": "12. Updates to this Policy",
-            "content": "QualiTrack may update this Privacy Policy periodically to reflect changes in our practices or in applicable regulations. Significant modifications will be notified via email at least 30 days in advance."
-        },
-        "policy13":{
-            "title": "13. Contact — Privacy Officer",
-            "content":{
-                "description":"For inquiries, complaints, or requests regarding the processing of your personal data:",
-                "email": `<strong>Email:</strong> <a href="mailto:privacidad@qualitrack.pe">privacidad@qualitrack.pe</a>`,
-                "postal": `<strong>Postal address:</strong> Lima, Peru`,
-                "conclusion": `You also have the right to file a complaint with the <strong>National Authority for the Protection of Personal Data (ANPD)</strong> of the Ministry of Justice of Peru if you believe that the processing of your data violates applicable regulations.`
+        "footer": {
+            "subscribe": {
+                "heading": "Stay Updated on Regulatory Compliance",
+                "placeholder": "Enter your work email",
+                "button": "Subscribe"
+            },
+            "links1": {
+                "heading": "Product",
+                "link1": "Features",
+                "link2": "Pricing Plans",
+                "link3": "How It Works"
+            },
+            "links2": {
+                "heading": "Contact",
+                "phone": "+51 (1) 234-5678",
+                "location": "Lima, Perú"
+            },
+            "copyright": "Copyright © 2026 IoTech",
+            "legal": {
+                "terms": "Terms of Service",
+                "privacy": "Privacy Policy"
             }
         }
-    }
-};
+    };
