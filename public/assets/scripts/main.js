@@ -3,6 +3,10 @@
 
 let currentLang = localStorage.getItem('qs-lang') || 'en';
 
+// Root of the site, taken from this script's location (public/assets/scripts/main.js), so the shared
+// header and footer work from index.html and from the pages in public/sections.
+var SITE_ROOT = new URL('../../../', document.currentScript.src).href;
+
 // Flatten nested object: { "nav": { "home": "Inicio" } } → { "nav.home": "Inicio" }
 function flattenTranslations(obj, prefix) {
     prefix = prefix || '';
@@ -74,8 +78,48 @@ function applyTranslations(lang) {
     document.documentElement.lang = lang;
 }
 
+// ---- Shared header and footer ----
+// Each page has <div id="header-placeholder"> and <div id="footer-placeholder">, replaced by
+// public/_header.html and public/_footer.html. In those files {{home}} is the home page ("" on the
+// home page itself, so its links only scroll) and {{root}} is the root of the site.
+function loadSharedLayout() {
+    var homeUrl = new URL('index.html', SITE_ROOT);
+    var onHome = location.pathname === new URL(SITE_ROOT).pathname || location.pathname === homeUrl.pathname;
+    var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html']];
+
+    return Promise.all(parts.map(function (part) {
+        var placeholder = document.getElementById(part[0]);
+        if (!placeholder) return null;
+        return fetch(SITE_ROOT + 'public/' + part[1])
+            .then(function (response) {
+                if (!response.ok) throw new Error(part[1] + ' could not be loaded');
+                return response.text();
+            })
+            .then(function (html) {
+                var template = document.createElement('template');
+                template.innerHTML = html
+                    .replace(/\{\{home\}\}/g, onHome ? '' : homeUrl.href)
+                    .replace(/\{\{root\}\}/g, SITE_ROOT);
+                var element = template.content.firstElementChild;
+                // Pages without a hero image keep the solid header (data-solid on the placeholder).
+                if (placeholder.hasAttribute('data-solid')) {
+                    element.classList.add('scrolled');
+                    element.dataset.solid = 'true';
+                }
+                placeholder.replaceWith(template.content);
+            });
+    }));
+}
+
 // ---- Language Switcher ----
 document.addEventListener('DOMContentLoaded', function () {
+    loadSharedLayout().then(initPage, function (error) {
+        console.warn('Shared layout not loaded:', error);
+        initPage();
+    });
+});
+
+function initPage() {
     applyTranslations(currentLang);
 
     // Floating switcher buttons
@@ -89,16 +133,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ---- Mobile Nav Toggle ----
     var menuBtn = document.getElementById('menu-btn');
-    var navbar = document.querySelector('.header .navbar');
+    var menuWrapper = document.querySelector('.header .menu-wrapper');
 
-    if (menuBtn && navbar) {
+    if (menuBtn && menuWrapper) {
         menuBtn.addEventListener('click', function () {
-            navbar.classList.toggle('active');
+            menuWrapper.classList.toggle('active');
         });
         // Close on nav link click (mobile)
-        navbar.querySelectorAll('a').forEach(function (link) {
+        menuWrapper.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
-                navbar.classList.remove('active');
+                menuWrapper.classList.remove('active');
             });
         });
     }
@@ -173,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('.header');
     if (header) {
         window.addEventListener('scroll', function () {
-            header.classList.toggle('scrolled', window.scrollY > 10);
+            header.classList.toggle('scrolled', header.dataset.solid === 'true' || window.scrollY > 10);
         });
     }
 
@@ -195,4 +239,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 3000);
         });
     }
-});
+}
