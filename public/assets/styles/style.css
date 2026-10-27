@@ -167,7 +167,12 @@ section {
 
 .features-accordion, .benefits-section {
     text-align: center;
-    background: var(--bg-alt);
+}
+
+/* Full-width white bands to alternate with the page background */
+.features-accordion, .about-us {
+    background: var(--card-bg);
+    max-width: none;
 }
 
 .what-we-offer .offer-box p, .features-accordion .accordion-content p,
@@ -497,11 +502,6 @@ section {
 }
 
 /* About Us Section */
-.about-us {
-    background: var(--bg-alt);
-    max-width: none;
-}
-
 .about-us .container-about {
     display: flex;
     flex-wrap: wrap;
