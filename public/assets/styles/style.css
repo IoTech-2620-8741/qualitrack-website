@@ -5,11 +5,22 @@
     --primary-color: #0ea5e9;        /* IoT cyan-blue */
     --secondary-color: #0c2340;      /* Deep navy for headings */
     --tertiary-color: #10b981;       /* Compliance green */
+    --primary-soft: rgba(14, 165, 233, 0.1);   /* Tinted backgrounds (badges) */
+    --primary-border: rgba(14, 165, 233, 0.25);
     --text-dark: #1e293b;
+    --text-body: #475569;            /* Paragraphs */
+    --text-muted: #64748b;           /* Captions, dates, secondary text */
     --text-light: #fff;
+    --text-on-dark: #cbd5e1;         /* Footer text */
+    --accent-on-dark: #f8ecc9;       /* Highlights over the navy gradient */
+    --rating-color: #f59e0b;         /* Review stars */
     --bg-light: #f0f5fa;
+    --bg-alt: #f8fafc;               /* Alternate sections */
+    --bg-tint: #eef6fd;              /* Tinted boxes */
     --bg-dark: #0f172a;
     --card-bg: #fff;
+    --border-color: #e2e8f0;
+    --border-strong: #cbd5e1;
     --box-shadow: 0 0.4rem 1.2rem rgba(14, 165, 233, 0.10);
 }
 
@@ -75,9 +86,9 @@ section {
 
 .section-button-title {
     display: inline-block;
-    background-color: rgba(14, 165, 233, 0.1);
+    background-color: var(--primary-soft);
     color: var(--primary-color);
-    border: 1px solid rgba(14, 165, 233, 0.25);
+    border: 1px solid var(--primary-border);
     padding: 8px 28px;
     border-radius: 50px;
     font-size: 1.6rem;
@@ -126,13 +137,13 @@ section {
 .features-accordion, .benefits-section {
     padding: 5rem 9%;
     text-align: center;
-    background: #f4f4f4;
+    background: var(--bg-alt);
 }
 
 .what-we-offer .offer-box p, .features-accordion .accordion-content p,
 .plans .plan-card .plan-description {
     font-size: 1.6rem;
-    color: #666;
+    color: var(--text-body);
     line-height: 1.6;
 }
 
@@ -145,8 +156,8 @@ section {
 }
 
 #language-switcher {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 5rem;
     padding: 0.5rem;
     display: flex;
@@ -160,7 +171,7 @@ section {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #555;
+    color: var(--text-body);
     border-radius: 5rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -183,7 +194,7 @@ section {
     align-items: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
     transition: box-shadow 0.3s ease;
 }
 
@@ -285,7 +296,7 @@ section {
 
 .home p {
     font-size: 2rem;
-    color: #4f4f4f;
+    color: var(--text-body);
     padding: 1rem 0;
     margin-bottom: 3rem;
 }
@@ -331,7 +342,7 @@ section {
 }
 
 .what-we-offer .offer-box {
-    background: #f0f8ff;
+    background: var(--bg-tint);
     padding: 4rem;
     text-align: left;
 }
@@ -385,8 +396,8 @@ section {
 }
 
 .features-accordion .accordion-item {
-    background: #fff;
-    border: 2px solid #ddd;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -437,7 +448,7 @@ section {
 }
 
 .benefit-card-image {
-    background: #fff;
+    background: var(--card-bg);
     overflow: hidden;
 }
 
@@ -461,19 +472,19 @@ section {
 
 .card-content h3 {
     font-size: 2rem;
-    color: #2B2B2B;
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .card-content p {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--text-body);
     line-height: 1.6;
 }
 
 /* About Us Section */
 .about-us {
-    background: #F9FAFE;
+    background: var(--bg-alt);
     max-width: none;
 }
 
@@ -503,7 +514,7 @@ section {
 
 .about-us .content-about p {
     font-size: 1.6rem;
-    color: #666;
+    color: var(--text-body);
     line-height: 1.7;
     margin-bottom: 2rem;
 }
@@ -513,7 +524,7 @@ section {
 
 .about-us .content-about ul li {
     font-size: 1.6rem;
-    color: #555;
+    color: var(--text-body);
     margin-bottom: 1rem;
 }
 
@@ -584,7 +595,7 @@ section {
 
 .our-team .team-member span {
     font-size: 1.4rem;
-    color: #666;
+    color: var(--text-body);
     line-height: 1.5;
     display: block;
 }
@@ -598,12 +609,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F9FAFE;
+    background: var(--bg-alt);
     border-radius: 1rem;
     padding: 0.5rem;
     width: fit-content;
     margin: 2rem auto 5rem;
-    border: 1px solid #B8B8B8;
+    border: 1px solid var(--border-strong);
 }
 
 .plans .toggle-btn {
@@ -612,7 +623,7 @@ section {
     font-size: 1.6rem;
     cursor: pointer;
     background: transparent;
-    color: #4f4f4f;
+    color: var(--text-body);
     font-weight: 500;
     white-space: nowrap;
 }
@@ -643,7 +654,7 @@ section {
 }
 
 .plans .plan-card.highlight-card {
-    background: linear-gradient(135deg, #0c2340 0%, #0ea5e9 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: var(--text-light);
     border: 2px solid var(--primary-color);
     box-shadow: 0 1rem 3rem rgba(14, 165, 233, 0.3);
@@ -656,7 +667,7 @@ section {
 }
 
 .plans .plan-card.highlight-card .annual-save, .plans .plan-card.highlight-card .features .fas {
-    color: #F8ECC9;
+    color: var(--accent-on-dark);
 }
 
 .plans .plan-card h3 {
@@ -673,7 +684,7 @@ section {
 
 .plans .plan-card .price span {
     font-size: 1.6rem;
-    color: #666;
+    color: var(--text-body);
 }
 
 .plans .plan-card .annual-save {
@@ -697,7 +708,7 @@ section {
 
 .plans .plan-card.highlight-card .btn {
     background: var(--text-light);
-    color: #2686B6;
+    color: var(--secondary-color);
 }
 
 .plans .plan-card .features {
@@ -717,7 +728,7 @@ section {
 
 .plans .plan-card .features li {
     font-size: 1.6rem;
-    color: #666;
+    color: var(--text-body);
     margin-bottom: 0.8rem;
 }
 
@@ -732,7 +743,7 @@ section {
 
 .plans .plan-card .plan-divider {
     height: 1px;
-    background-color: #ddd;
+    background-color: var(--border-color);
     margin: 3rem 0;
 }
 
@@ -750,7 +761,7 @@ section {
 }
 
 .testimonials-cta .container-cta {
-    background: #f0f8ff;
+    background: var(--bg-tint);
     border-radius: 1.5rem;
     padding: 6rem;
     display: flex;
@@ -774,7 +785,7 @@ section {
 
 .testimonials-cta .container-cta .btn.subscribe-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
-    color: #fff;
+    color: var(--text-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1.5rem 4rem;
     font-size: 2rem;
@@ -807,18 +818,18 @@ section {
     background: var(--card-bg);
     padding: 3rem;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
 }
 
 .testimonials-cta .review-stars {
-    color: #ffc107;
+    color: var(--rating-color);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
 .testimonials-cta .review-text {
     font-size: 1.6rem;
-    color: #555;
+    color: var(--text-body);
     line-height: 1.6;
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -826,7 +837,7 @@ section {
 
 .testimonials-cta .reviewer-name {
     font-size: 1.4rem;
-    color: #888;
+    color: var(--text-muted);
     font-weight: 500;
 }
 
@@ -871,7 +882,7 @@ section {
 .footer .footer-links .column a, .footer .footer-links .column p {
     display: block;
     font-size: 1.4rem;
-    color: #ccc;
+    color: var(--text-on-dark);
     margin-bottom: 1rem;
 }
 
@@ -885,11 +896,11 @@ section {
     align-items: center;
     margin-top: 5rem;
     font-size: 1.4rem;
-    color: #ccc;
+    color: var(--text-on-dark);
 }
 
 .footer .copyright .legal-links a {
-    color: #ccc;
+    color: var(--text-on-dark);
     margin-left: 2rem;
 }
 
@@ -944,7 +955,7 @@ section {
 
 .legal-page-content .last-updated {
     font-size: 1.4rem;
-    color: #888;
+    color: var(--text-muted);
     margin-bottom: 5rem;
     display: block;
 }
@@ -956,12 +967,12 @@ section {
     margin-top: 4rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .legal-page-content p, .legal-page-content ul li {
     font-size: 1.6rem;
-    color: #555;
+    color: var(--text-body);
     line-height: 1.8;
 }
 
@@ -992,7 +1003,7 @@ section {
     margin-top: 5rem;
     padding: 1.2rem 3rem;
     background: var(--primary-color);
-    color: #fff;
+    color: var(--text-light);
     font-size: 1.6rem;
     font-weight: 600;
     text-decoration: none;
