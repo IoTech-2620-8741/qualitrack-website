@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Konkhmer+Sleokchher&family=Lexend&family=Manrope:wght@200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     /* QualiTrack – Brand Colors */
     --primary-color: #0ea5e9;        /* IoT cyan-blue */
     --secondary-color: #0c2340;      /* Deep navy for headings */
     --tertiary-color: #10b981;       /* Compliance green */
-    --accent-color: #6366f1;         /* Accent violet */
     --text-dark: #1e293b;
     --text-light: #fff;
     --bg-light: #f0f5fa;
     --bg-dark: #0f172a;
-    --bg-highlight: #e0f2fe;
     --card-bg: #fff;
     --box-shadow: 0 0.4rem 1.2rem rgba(14, 165, 233, 0.10);
 }
@@ -43,22 +41,99 @@ section {
     margin: 0 auto;
 }
 
-.heading,
-.subheading {
+/* Shared Styles */
+
+.btn, .btn-home, .legal-back-btn {
+    display: inline-block;
+    border-radius: 5rem;
+}
+
+.heading, .section-heading-split, .testimonials-cta .reviews-heading {
+    font-size: 3rem;
+}
+
+.heading, .section-heading-split {
     text-align: center;
     color: var(--secondary-color);
 }
 
 .heading {
-    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.subheading {
+.btn {
+    padding: 1rem 3rem;
+    background: var(--secondary-color);
+    color: var(--text-light);
     font-size: 1.8rem;
-    color: var(--tertiary-color);
-    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+.section-button-title {
+    display: inline-block;
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    padding: 8px 28px;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.section-heading-split {
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.section-heading-split .highlight-blue {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.offer-box, .benefit-card-image, .team-member, .plan-card, .review-card {
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.offer-box, .team-member, .plan-card {
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.benefit-card-image, .review-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-box:hover, .benefit-card-image:hover, .team-member:hover, .plan-card:hover, .review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.what-we-offer .container, .benefits-grid-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 3rem;
+}
+
+.features-accordion, .benefits-section {
+    padding: 5rem 9%;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.what-we-offer .offer-box p, .features-accordion .accordion-content p,
+.plans .plan-card .plan-description {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Language Switcher */
@@ -96,29 +171,7 @@ section {
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.description {
-    text-align: center;
-    font-size: 1.6rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    line-height: 1.6;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 3rem;
-    border-radius: 5rem;
-    background: var(--secondary-color);
-    color: var(--text-light);
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: var(--primary-color);
-}
-
+/* NavBar - Header */
 .header {
     position: fixed;
     top: 0;
@@ -175,28 +228,13 @@ section {
     margin-left: auto;
 }
 
-.header .buttons .sign-in {
-    background: transparent;
-    color: var(--secondary-color);
-    padding: 0.8rem 2rem;
-}
-
-.header .buttons .sign-in:hover {
-    color: var(--primary-color);
-}
-
 .header .buttons .sign-up {
     background: var(--primary-color);
-    color: var(--text-light);
     padding: 0.8rem 2rem;
 }
 
 .header .buttons .sign-up:hover {
     background: var(--secondary-color);
-}
-
-.header #toggler {
-    display: none;
 }
 
 .header .fa-bars {
@@ -215,7 +253,7 @@ section {
     align-items: center;
     justify-content: space-evenly;
     padding-top: 10rem;
-    background: url('../images/light-blue-and-white-background.jpg') no-repeat center center;
+    background: url("../images/light-blue-and-white-background.jpg") no-repeat center center;
     background-size: cover;
     max-width: none;
 }
@@ -253,9 +291,7 @@ section {
 }
 
 .home .btn-home {
-    display: inline-block;
     padding: 1.2rem 3rem;
-    border-radius: 5rem;
     background: var(--primary-color);
     color: var(--text-light);
     font-size: 2rem;
@@ -270,20 +306,7 @@ section {
     z-index: 2;
     max-width: 45rem;
     animation: float 3s ease-in-out infinite;
-    display: block;
     margin-left: 2rem;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-1rem);
-    }
 }
 
 .home .image-container .home-image img {
@@ -292,32 +315,14 @@ section {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-.section-button-title {
-    display: inline-block;
-    background-color: rgba(14, 165, 233, 0.1);
-    color: var(--primary-color);
-    border: 1px solid rgba(14, 165, 233, 0.25);
-    padding: 8px 28px;
-    border-radius: 50px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 15px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.section-heading-split {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-heading-split .highlight-blue {
-    color: var(--primary-color);
-    font-weight: 800;
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
 }
 
 /* What We Offer Section */
@@ -325,34 +330,13 @@ section {
     margin-bottom: 3rem;
 }
 
-.what-we-offer .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    gap: 3rem;
-}
-
 .what-we-offer .offer-box {
     background: #f0f8ff;
-    border-radius: 1.5rem;
     padding: 4rem;
     text-align: left;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .what-we-offer .offer-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
-}
-
-.what-we-offer .offer-box.highlight {
-    background: #e6f7ff;
-    border: 2px solid var(--primary-color);
-}
-
-.what-we-offer .offer-box.highlight:hover {
     border-color: var(--primary-color);
 }
 
@@ -368,21 +352,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.what-we-offer .offer-box p {
-    font-size: 1.6rem;
-    color: #666;
-    line-height: 1.6;
-}
-
 /* Features Section */
-.features-accordion {
-    padding: 5rem 9%;
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;
-    background: #f4f4f4;
-}
-
 .features-accordion .features-container-split {
     display: flex;
     flex-wrap: wrap;
@@ -461,43 +431,14 @@ section {
     padding: 1.5rem 3rem;
 }
 
-.features-accordion .accordion-content p {
-    font-size: 1.6rem;
-    color: #666;
-    line-height: 1.6;
-}
-
 /* Benefits Section */
-.benefits-section {
-    padding: 5rem 9%;
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;
-    background: #f4f4f4;
-}
-
-.benefits-section .heading {
-    margin-bottom: 3.5rem;
-}
-
 .benefits-grid-image {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    gap: 3rem;
     justify-content: center;
 }
 
 .benefit-card-image {
     background: #fff;
-    border-radius: 1.5rem;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefit-card-image:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .card-image-container {
@@ -553,12 +494,6 @@ section {
     text-align: left;
 }
 
-.about-us .content-about h3 {
-    font-size: 2rem;
-    color: var(--tertiary-color);
-    text-transform: uppercase;
-}
-
 .about-us .content-about h2 {
     font-size: 3.1rem;
     color: var(--secondary-color);
@@ -572,7 +507,6 @@ section {
     line-height: 1.7;
     margin-bottom: 2rem;
 }
-
 .about-us .content-about ul {
     list-style: none;
 }
@@ -600,7 +534,6 @@ section {
 .about-us .video-container iframe {
     width: 100%;
     height: 100%;
-    border: none;
 }
 
 /* Our Team Section */
@@ -619,19 +552,13 @@ section {
 
 .our-team .team-member {
     background: var(--card-bg);
-    border-radius: 1.5rem;
     padding: 3rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     text-align: center;
     flex: 1 1 30rem;
     max-width: 32rem;
 }
 
 .our-team .team-member:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     border-color: var(--primary-color);
 }
 
@@ -662,7 +589,6 @@ section {
     display: block;
 }
 
-
 /* Plans Section */
 .plans {
     text-align: center;
@@ -686,7 +612,6 @@ section {
     font-size: 1.6rem;
     cursor: pointer;
     background: transparent;
-    border: none;
     color: #4f4f4f;
     font-weight: 500;
     white-space: nowrap;
@@ -707,19 +632,13 @@ section {
 
 .plans .plan-card {
     background: var(--card-bg);
-    border-radius: 1.5rem;
     padding: 4rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     text-align: center;
     max-width: 45rem;
     flex-grow: 1;
 }
 
 .plans .plan-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     border-color: var(--primary-color);
 }
 
@@ -730,19 +649,13 @@ section {
     box-shadow: 0 1rem 3rem rgba(14, 165, 233, 0.3);
 }
 
-.plans .plan-card.highlight-card h3,
-.plans .plan-card.highlight-card .price p,
-.plans .plan-card.highlight-card .price span,
-.plans .plan-card.highlight-card .features h4,
+.plans .plan-card.highlight-card h3, .plans .plan-card.highlight-card .price p,
+.plans .plan-card.highlight-card .price span, .plans .plan-card.highlight-card .features h4,
 .plans .plan-card.highlight-card .features li {
     color: var(--text-light);
 }
 
-.plans .plan-card.highlight-card .annual-save {
-    color: #F8ECC9;
-}
-
-.plans .plan-card.highlight-card .features .fas {
+.plans .plan-card.highlight-card .annual-save, .plans .plan-card.highlight-card .features .fas {
     color: #F8ECC9;
 }
 
@@ -750,10 +663,6 @@ section {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
-}
-
-.plans .plan-card .price {
-    margin-bottom: 0;
 }
 
 .plans .plan-card .price p {
@@ -777,7 +686,6 @@ section {
 .plans .plan-card .btn {
     margin-top: 2rem;
     background: var(--primary-color);
-    color: var(--text-light);
     width: 100%;
     transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -819,14 +727,10 @@ section {
 }
 
 .plans .plan-card .plan-description {
-    font-size: 1.6rem;
-    color: #666;
-    line-height: 1.6;
     margin-bottom: 2rem;
 }
 
 .plans .plan-card .plan-divider {
-    border: 0;
     height: 1px;
     background-color: #ddd;
     margin: 3rem 0;
@@ -871,12 +775,9 @@ section {
 .testimonials-cta .container-cta .btn.subscribe-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
     color: #fff;
-    border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 5rem;
     padding: 1.5rem 4rem;
     font-size: 2rem;
-    cursor: pointer;
     white-space: nowrap;
 }
 
@@ -891,7 +792,6 @@ section {
 }
 
 .testimonials-cta .reviews-heading {
-    font-size: 3rem;
     color: var(--secondary-color);
     margin-bottom: 3rem;
 }
@@ -905,17 +805,9 @@ section {
 
 .testimonials-cta .review-card {
     background: var(--card-bg);
-    border-radius: 1.5rem;
     padding: 3rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     border: 1px solid #eee;
-}
-
-.testimonials-cta .review-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .testimonials-cta .review-stars {
@@ -943,51 +835,7 @@ section {
     background: var(--bg-dark);
     color: var(--text-light);
     padding: 5rem 9%;
-    max-width: none;
-    margin: 0;
 }
-
-.footer .top-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
-}
-
-.footer .top-footer .subscribe-text h2 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-.footer .top-footer .subscribe-form {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer .top-footer .subscribe-form input {
-    background: #333;
-    border-radius: 5rem;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    color: var(--text-light);
-    border: none;
-}
-
-.footer .top-footer .subscribe-form .subscribe-btn {
-    background: var(--primary-color);
-    color: var(--text-light);
-    padding: 1.2rem 2.5rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-    border-radius: 5rem;
-}
-
-.footer .top-footer .subscribe-form .subscribe-btn:hover {
-    background: var(--secondary-color);
-}
-
 .footer .bottom-footer {
     display: flex;
     justify-content: space-between;
@@ -995,17 +843,13 @@ section {
     flex-wrap: wrap;
     gap: 3rem;
 }
-
 .footer .footer-logo {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
 .footer .footer-logo img {
-    width: auto;
     max-width: 16rem;
-    height: auto;
 }
 
 .footer .footer-logo p {
@@ -1024,15 +868,14 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.footer .footer-links .column a,
-.footer .footer-links .column p {
+.footer .footer-links .column a, .footer .footer-links .column p {
     display: block;
     font-size: 1.4rem;
     color: #ccc;
     margin-bottom: 1rem;
 }
 
-.footer .footer-links .column a:hover {
+.footer .footer-links .column a:hover, .footer .copyright .legal-links a:hover {
     color: var(--primary-color);
 }
 
@@ -1050,242 +893,7 @@ section {
     margin-left: 2rem;
 }
 
-.footer .copyright .legal-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 1200px) {
-    .header .navbar a {
-        font-size: 1.6rem;
-        padding: 0 1rem;
-    }
-
-    .home {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 10rem;
-    }
-
-    .home .image-container {
-        margin-top: 2rem;
-    }
-
-    .what-we-offer .container {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    }
-
-    .benefits-grid-image {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    }
-
-    .plan-toggle {
-        justify-content: center;
-    }
-
-    .plans-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .plan-card {
-        margin-bottom: 2rem;
-    }
-
-    .footer .bottom-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
-
-    section {
-        padding: 5rem 3%;
-    }
-
-    .header {
-        padding: 2rem 3%;
-    }
-
-    .hero-content-wrapper h1 {
-        font-size: 4.5rem;
-    }
-
-    .home .hero-content-wrapper {
-        padding: 0 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .header .fa-bars {
-        display: block;
-        cursor: pointer;
-    }
-
-    .header .menu-wrapper {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--card-bg);
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 2rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: clip-path 0.3s ease-in-out;
-        display: none;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .header .menu-wrapper.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        display: flex;
-    }
-
-    .header .navbar {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .header .buttons {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 1rem;
-        border-top: 1px solid var(--bg-light);
-        padding-top: 1rem;
-        margin-left: 0;
-    }
-
-    .header .buttons a {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .header .navbar a {
-        padding: 1rem;
-        margin: 0;
-    }
-
-    .video-container-split,
-    .video-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .video-container iframe,
-    .video-container-split iframe {
-        width: 100%;
-        height: 30rem;
-    }
-
-    .features-container-split {
-        flex-direction: column;
-    }
-
-    .about-us .container-about {
-        flex-direction: column;
-    }
-
-    .about-us .content-about {
-        text-align: center;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .team-member {
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: var(--box-shadow);
-    }
-
-    .what-we-offer .container {
-        grid-template-columns: 1fr;
-    }
-
-    .benefits-grid-image {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonials-cta .container-reviews .review-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .testimonials-cta .container-reviews {
-        padding: 2rem;
-    }
-
-    .footer .top-footer {
-        flex-direction: column;
-    }
-
-    .footer .subscribe-form {
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    .footer .subscribe-form input {
-        flex-grow: 1;
-    }
-
-    .footer .bottom-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer .footer-logo,
-    .footer .footer-links .column {
-        align-items: center;
-    }
-
-    .footer .footer-logo img {
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 450px) {
-    html {
-        font-size: 50%;
-    }
-
-    .header {
-        padding: 2rem;
-    }
-
-    .home .hero-content-wrapper h1 {
-        font-size: 3.5rem;
-    }
-
-    .cta-content .cta-heading {
-        font-size: 3rem;
-    }
-}
-
-/* =========================================
-   Scroll-Reveal Animations (main.js)
-   ========================================= */
+/* Scroll-Reveal Animations (main.js) */
 .reveal-hidden {
     opacity: 0;
     transform: translateY(2.5rem);
@@ -1297,9 +905,7 @@ section {
     transform: translateY(0);
 }
 
-/* =========================================
-   Legal Pages (tos.html / policies.html)
-   ========================================= */
+/* Legal pages - Terms of Service and Policies */
 .legal-page-wrapper {
     min-height: 100vh;
     background: var(--bg-light);
@@ -1353,10 +959,13 @@ section {
     border-bottom: 2px solid #e2e8f0;
 }
 
-.legal-page-content p {
+.legal-page-content p, .legal-page-content ul li {
     font-size: 1.6rem;
     color: #555;
     line-height: 1.8;
+}
+
+.legal-page-content p {
     margin-bottom: 1.5rem;
 }
 
@@ -1367,9 +976,6 @@ section {
 }
 
 .legal-page-content ul li {
-    font-size: 1.6rem;
-    color: #555;
-    line-height: 1.8;
     margin-bottom: 0.8rem;
 }
 
@@ -1383,12 +989,10 @@ section {
 }
 
 .legal-page-content .legal-back-btn {
-    display: inline-block;
     margin-top: 5rem;
     padding: 1.2rem 3rem;
     background: var(--primary-color);
     color: #fff;
-    border-radius: 5rem;
     font-size: 1.6rem;
     font-weight: 600;
     text-decoration: none;
@@ -1398,4 +1002,184 @@ section {
 .legal-page-content .legal-back-btn:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1200px) {
+    .header .navbar a {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+    .home .image-container {
+        margin-top: 2rem;
+    }
+
+    .what-we-offer .container, .benefits-grid-image {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        margin-bottom: 2rem;
+    }
+
+    .footer .bottom-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 5rem 3%;
+    }
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+    .hero-content-wrapper h1 {
+        font-size: 4.5rem;
+    }
+
+    .home .hero-content-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .fa-bars {
+        display: block;
+    }
+
+    .header .menu-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.3s ease-in-out;
+        display: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header .menu-wrapper.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        display: flex;
+    }
+
+    .header .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header .buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        border-top: 1px solid var(--bg-light);
+        padding-top: 1rem;
+        margin-left: 0;
+    }
+
+    .header .buttons a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .header .navbar a {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .video-container-split, .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .video-container iframe, .video-container-split iframe {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .features-container-split {
+        flex-direction: column;
+    }
+
+    .about-us .container-about {
+        flex-direction: column;
+    }
+
+    .about-us .content-about {
+        text-align: center;
+    }
+
+    .what-we-offer .container, .benefits-grid-image {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-cta .container-reviews .review-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .testimonials-cta .container-reviews {
+        padding: 2rem;
+    }
+
+    .footer .footer-logo, .footer .footer-links .column {
+        align-items: center;
+    }
+
+    .footer .footer-logo img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .home .hero-content-wrapper h1 {
+        font-size: 3.5rem;
+    }
 }
