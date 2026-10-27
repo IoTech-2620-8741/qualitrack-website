@@ -1183,6 +1183,30 @@ section {
     .footer .footer-logo img {
         margin-bottom: 1rem;
     }
+
+    .testimonials-cta .container-cta {
+        flex-direction: column;
+        padding: 4rem 3rem;
+    }
+
+    .testimonials-cta .container-cta .cta-content {
+        text-align: center;
+    }
+
+    /* Extra bottom space so the floating language switcher does not cover the legal links */
+    .footer {
+        padding-bottom: 10rem;
+    }
+
+    .footer .copyright {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer .copyright .legal-links a {
+        margin: 0 1rem;
+    }
 }
 
 @media (max-width: 450px) {
