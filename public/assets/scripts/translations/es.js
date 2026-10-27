@@ -1,4 +1,61 @@
 const Es = {
+
+    
+    "tos": {
+        "back": "← Volver al inicio",
+        "title": "Términos de Servicio",
+        "lastUpdated": "Última actualización: abril de 2025",
+        "introduction": "Bienvenido a <strong>QualiTrack</strong>, una plataforma SaaS para la gestión de calidad farmacéutica (QMS) desarrollada por <strong>IoTech</strong>. Al acceder a nuestra plataforma o utilizarla, usted acepta quedar sujeto a estos Términos de Servicio. Léalos detenidamente antes de utilizar el servicio.",
+        "acceptance": {
+            "title": "1. Aceptación de los Términos",
+            "confirmation": "Al crear una cuenta, registrar su laboratorio o utilizar cualquier funcionalidad de QualiTrack, usted confirma que ha leído, comprendido y aceptado estos Términos de Servicio. Si actúa en representación de una empresa u organización, confirma que cuenta con la autoridad necesaria para obligarla al cumplimiento de estos términos.",
+            "rejection": "Si no está de acuerdo con alguna parte de estos términos, no utilice la plataforma."
+        },
+        "service": {
+            "title": "2. Descripción del Servicio",
+            "intro": "QualiTrack ofrece una plataforma SaaS enfocada en:",
+            "monitoring": "Monitoreo en tiempo real de variables críticas (temperatura, presión y pH) mediante la integración de dispositivos IoT.",
+            "compliance": "Automatización del cumplimiento de las Buenas Prácticas de Manufactura (BPM), conforme a los requisitos de DIGEMID y normativas equivalentes.",
+            "batches": "Gestión del ciclo de vida de los lotes de producción farmacéutica con trazabilidad inmutable.",
+            "reports": "Generación de informes de auditoría en PDF no editables para inspecciones regulatorias.",
+            "alerts": "Gestión de alertas, firmas digitales y control de acceso basado en roles (RBAC)."
+        },
+        "account": {
+            "title": "3. Registro de Usuario y Cuenta",
+            "intro": "Para utilizar QualiTrack, debe registrar su laboratorio proporcionando información veraz, completa y actualizada. Usted es responsable de:",
+            "credentials": "Mantener la confidencialidad de sus credenciales de acceso.",
+            "roles": "Administrar adecuadamente los roles y permisos de los usuarios de su organización.",
+            "unauthorized": "Notificar inmediatamente a QualiTrack cualquier acceso no autorizado a su cuenta.",
+            "suspension": "QualiTrack se reserva el derecho de suspender o cancelar las cuentas que incumplan estos términos o presenten actividades sospechosas."
+        },
+        "subscription": {
+            "title": "4. Planes de Suscripción y Pagos",
+            "intro": "QualiTrack funciona bajo un modelo de suscripción SaaS con facturación mensual o anual, según el plan elegido (Standard o Enterprise). Los precios pueden modificarse con una notificación previa de 30 días.",
+            "renewal": "Las suscripciones se renuevan automáticamente al finalizar cada período de facturación.",
+            "refunds": "No se realizan reembolsos por períodos utilizados parcialmente, salvo cuando lo exija la legislación peruana.",
+            "nonpayment": "La falta de pago puede ocasionar la suspensión o cancelación del acceso al servicio."
+        },
+        "acceptable": {
+            "title": "5. Uso Permitido",
+            "intro": "Usted acepta utilizar QualiTrack únicamente para fines lícitos y de conformidad con la normativa aplicable. Queda prohibido:",
+            "falseData": "Introducir datos falsos, fraudulentos o manipulados en registros de lotes o de telemetría.",
+            "unauthorized": "Intentar acceder sin autorización a sistemas, cuentas o datos de otros usuarios.",
+            "reverseEngineering": "Realizar ingeniería inversa, descompilar o intentar extraer el código fuente de la plataforma.",
+            "regulations": "Utilizar la plataforma para actividades que infrinjan la normativa farmacéutica o sanitaria aplicable.",
+            "malware": "Transmitir software malicioso, virus o cualquier código perjudicial a través de la plataforma."
+        },
+        "integrity": {
+            "title": "6. Integridad de Datos y Responsabilidad Regulatoria",
+            "responsibility": "QualiTrack proporciona herramientas para facilitar el cumplimiento normativo; sin embargo, la responsabilidad final de cumplir con las Buenas Prácticas de Manufactura, validar los procesos y liberar los lotes corresponde al laboratorio usuario y a su Director Técnico o Químico Farmacéutico responsable.",
+            "disclaimer": "QualiTrack no se responsabiliza por sanciones, multas o consecuencias regulatorias derivadas del uso inadecuado de la plataforma, la configuración incorrecta de parámetros BPM o las decisiones tomadas a partir de datos inexactos ingresados por los usuarios."
+        },
+        "property": {
+            "title": "7. Propiedad Intelectual",
+            "rights": "Todos los derechos de propiedad intelectual sobre QualiTrack, incluidos su código fuente, diseño, arquitectura, marcas y documentación, pertenecen exclusivamente a IoTech. El uso de la plataforma no transfiere al usuario ningún derecho de propiedad intelectual.",
+            "data": "Los datos generados por el laboratorio (registros de lotes, telemetría e historiales) son propiedad del laboratorio usuario, y QualiTrack actúa únicamente como encargado del tratamiento de dichos datos."
+        }
+    },
+
     "nav": {
         "home": "Inicio",
         "features": "Características",
