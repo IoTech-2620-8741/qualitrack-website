@@ -836,6 +836,7 @@ section {
     color: var(--text-light);
     padding: 5rem 9%;
 }
+
 .footer .bottom-footer {
     display: flex;
     justify-content: space-between;
@@ -843,11 +844,13 @@ section {
     flex-wrap: wrap;
     gap: 3rem;
 }
+
 .footer .footer-logo {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
 .footer .footer-logo img {
     max-width: 16rem;
 }
@@ -857,10 +860,13 @@ section {
     font-weight: 700;
 }
 
+/* Grid de 2 columnas: Product | Contact en la fila 1,
+   Terms of Service | Privacy Policy en la fila 2 (cada uno bajo su columna) */
 .footer .footer-links {
-    display: flex;
-    gap: 5rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 5rem;
+    row-gap: 2rem;
 }
 
 .footer .footer-links .column h4 {
@@ -875,22 +881,23 @@ section {
     margin-bottom: 1rem;
 }
 
-.footer .footer-links .column a:hover, .footer .copyright .legal-links a:hover {
+.footer .footer-links .legal-link {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.footer .footer-links a:hover {
     color: var(--primary-color);
 }
 
 .footer .copyright {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 5rem;
     font-size: 1.4rem;
     color: #ccc;
-}
-
-.footer .copyright .legal-links a {
-    color: #ccc;
-    margin-left: 2rem;
+    text-align: center;
 }
 
 /* Scroll-Reveal Animations (main.js) */
@@ -1004,7 +1011,6 @@ section {
     transform: translateY(-2px);
 }
 
-/* Media Queries for responsive design */
 @media (max-width: 1200px) {
     .header .navbar a {
         font-size: 1.6rem;
@@ -1041,8 +1047,8 @@ section {
     }
 
     .footer .footer-links {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
         gap: 2rem;
         margin-top: 2rem;
     }
@@ -1159,6 +1165,10 @@ section {
 
     .testimonials-cta .container-reviews {
         padding: 2rem;
+    }
+
+    .footer {
+        padding-bottom: 10rem;
     }
 
     .footer .footer-logo, .footer .footer-links .column {
