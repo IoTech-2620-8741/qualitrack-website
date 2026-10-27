@@ -1,5 +1,4 @@
 const Es = {
-
     
     "tos": {
         "back": "← Volver al inicio",
@@ -53,9 +52,38 @@ const Es = {
             "title": "7. Propiedad Intelectual",
             "rights": "Todos los derechos de propiedad intelectual sobre QualiTrack, incluidos su código fuente, diseño, arquitectura, marcas y documentación, pertenecen exclusivamente a IoTech. El uso de la plataforma no transfiere al usuario ningún derecho de propiedad intelectual.",
             "data": "Los datos generados por el laboratorio (registros de lotes, telemetría e historiales) son propiedad del laboratorio usuario, y QualiTrack actúa únicamente como encargado del tratamiento de dichos datos."
+        },
+    
+        "privacy": {
+            "title": "8. Confidencialidad y Protección de Datos",
+            "content": "QualiTrack se compromete a mantener la confidencialidad de la información del laboratorio y a implementar medidas técnicas y organizativas apropiadas para proteger los datos tratados. Consulte nuestra <a href=\"policies.html\">Política de Privacidad</a> para obtener más información sobre el tratamiento de datos personales."
+        },
+        "sla": {
+            "title": "9. Disponibilidad del Servicio (SLA)",
+            "content": "QualiTrack procura mantener una disponibilidad del servicio del 99,5 % mensual. Los períodos de mantenimiento programado se comunicarán con al menos 48 horas de anticipación. QualiTrack no será responsable por interrupciones del servicio ocasionadas por factores ajenos a su control, incluidos problemas de conectividad del cliente o ciberataques de terceros."
+        },
+        "liability": {
+            "title": "10. Limitación de Responsabilidad",
+            "content": "En la máxima medida permitida por la ley, QualiTrack no será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluida la pérdida de beneficios, datos o reputación, derivados del uso o la imposibilidad de utilizar el servicio. La responsabilidad total de QualiTrack frente al usuario no excederá el importe pagado durante los 3 meses anteriores al hecho que dio origen a la reclamación."
+        },
+        "modifications": {
+            "title": "11. Modificaciones de los Términos",
+            "content": "QualiTrack se reserva el derecho de modificar estos Términos de Servicio en cualquier momento. Los cambios sustanciales se notificarán con al menos 30 días de anticipación. El uso continuado del servicio después de recibir la notificación constituye la aceptación de los nuevos términos."
+        },
+        "termination": {
+            "title": "12. Terminación",
+            "content": "Cualquiera de las partes puede cancelar la suscripción mediante una notificación previa de 30 días. Tras la terminación, el laboratorio dispondrá de 60 días para exportar sus datos. Después de ese plazo, los datos podrán eliminarse de los servidores de QualiTrack, salvo que una obligación legal exija conservarlos."
+        },
+        "jurisdiction": {
+            "title": "13. Ley Aplicable y Jurisdicción",
+            "content": "Estos Términos se rigen por las leyes de la República del Perú. Cualquier controversia que no pueda resolverse de manera amistosa se someterá a los tribunales competentes de Lima Metropolitana."
+        },
+        "contact": {
+            "title": "14. Contacto",
+            "content": "Para consultas sobre estos Términos de Servicio:<br/><strong>Correo electrónico:</strong> legal@qualitrack.pe<br/><strong>Dirección:</strong> Lima, Perú"
         }
     },
-
+    
     "nav": {
         "home": "Inicio",
         "features": "Características",
