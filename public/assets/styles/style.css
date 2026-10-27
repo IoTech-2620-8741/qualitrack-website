@@ -35,6 +35,15 @@
 
     /* Spacing */
     --section-padding: 8rem 9%;
+
+    /* Shapes and elevation */
+    --radius-sm: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-pill: 5rem;
+    --shadow-sm: 0 0.5rem 1rem rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 1rem 2.4rem rgba(15, 23, 42, 0.12);
+    --shadow-primary: 0 0.8rem 2rem rgba(14, 165, 233, 0.3);
+    --lift: translateY(-0.6rem);
 }
 
 * {
@@ -69,7 +78,17 @@ section {
 
 .btn, .btn-home, .legal-back-btn {
     display: inline-block;
-    border-radius: 5rem;
+    padding: 1.2rem 3rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--fs-large);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover, .btn-home:hover, .legal-back-btn:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-primary);
 }
 
 .heading, .section-heading-split, .testimonials-cta .reviews-heading {
@@ -86,11 +105,8 @@ section {
 }
 
 .btn {
-    padding: 1rem 3rem;
     background: var(--secondary-color);
     color: var(--text-light);
-    font-size: var(--fs-large);
-    cursor: pointer;
 }
 
 .btn:hover {
@@ -102,8 +118,8 @@ section {
     background-color: var(--primary-soft);
     color: var(--primary-color);
     border: 1px solid var(--primary-border);
-    padding: 8px 28px;
-    border-radius: 50px;
+    padding: 0.8rem 2.8rem;
+    border-radius: var(--radius-pill);
     font-size: var(--fs-body);
     font-weight: 600;
     text-align: center;
@@ -123,22 +139,16 @@ section {
 }
 
 .offer-box, .benefit-card-image, .team-member, .plan-card, .review-card {
-    border-radius: 1.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-}
-
-.offer-box, .team-member, .plan-card {
-    border: 2px solid transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.benefit-card-image, .review-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .offer-box:hover, .benefit-card-image:hover, .team-member:hover, .plan-card:hover, .review-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: var(--lift);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-border);
 }
 
 .what-we-offer .container, .benefits-grid-image {
@@ -314,11 +324,9 @@ section {
 }
 
 .home .btn-home {
-    padding: 1.2rem 3rem;
     background: var(--primary-color);
     color: var(--text-light);
     font-size: var(--fs-lead);
-    cursor: pointer;
 }
 
 .home .btn-home:hover {
@@ -334,8 +342,8 @@ section {
 
 .home .image-container .home-image img {
     width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
 @keyframes float {
@@ -357,10 +365,6 @@ section {
     background: var(--bg-tint);
     padding: 4rem;
     text-align: left;
-}
-
-.what-we-offer .offer-box:hover {
-    border-color: var(--primary-color);
 }
 
 .what-we-offer .offer-box .icon-container {
@@ -387,9 +391,9 @@ section {
 .features-accordion .video-container-split {
     flex: 1 1 50rem;
     aspect-ratio: 16 / 9;
-    border-radius: 1.5rem;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
     animation: float 3s ease-in-out infinite;
     min-width: 40rem;
 }
@@ -409,10 +413,10 @@ section {
 
 .features-accordion .accordion-item {
     background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .features-accordion .accordion-item.active {
@@ -549,9 +553,9 @@ section {
     position: relative;
     flex: 1 1 50rem;
     aspect-ratio: 16 / 9;
-    border-radius: 1.5rem;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-md);
 }
 
 .about-us .video-container iframe {
@@ -579,10 +583,6 @@ section {
     text-align: center;
     flex: 1 1 30rem;
     max-width: 32rem;
-}
-
-.our-team .team-member:hover {
-    border-color: var(--primary-color);
 }
 
 .our-team .team-member img {
@@ -621,8 +621,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-alt);
-    border-radius: 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius-pill);
     padding: 0.5rem;
     width: fit-content;
     margin: 2rem auto 5rem;
@@ -631,7 +631,7 @@ section {
 
 .plans .toggle-btn {
     padding: 1rem 3rem;
-    border-radius: 1rem;
+    border-radius: var(--radius-pill);
     font-size: var(--fs-body);
     cursor: pointer;
     background: transparent;
@@ -643,7 +643,7 @@ section {
 .plans .toggle-btn.active {
     background: var(--primary-color);
     color: var(--text-light);
-    box-shadow: 0 0.5rem 1rem rgba(14, 165, 233, 0.25);
+    box-shadow: var(--shadow-primary);
 }
 
 .plans .plans-container {
@@ -661,15 +661,11 @@ section {
     flex-grow: 1;
 }
 
-.plans .plan-card:hover {
-    border-color: var(--primary-color);
-}
-
 .plans .plan-card.highlight-card {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: var(--text-light);
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 1rem 3rem rgba(14, 165, 233, 0.3);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-primary);
 }
 
 .plans .plan-card.highlight-card h3, .plans .plan-card.highlight-card .price p,
@@ -710,17 +706,20 @@ section {
     margin-top: 2rem;
     background: var(--primary-color);
     width: 100%;
-    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .plans .plan-card .btn:hover {
     background: var(--secondary-color);
-    transform: translateY(-2px);
 }
 
 .plans .plan-card.highlight-card .btn {
     background: var(--text-light);
     color: var(--secondary-color);
+}
+
+.plans .plan-card.highlight-card .btn:hover {
+    background: var(--secondary-color);
+    color: var(--text-light);
 }
 
 .plans .plan-card .features {
@@ -774,7 +773,7 @@ section {
 
 .testimonials-cta .container-cta {
     background: var(--bg-tint);
-    border-radius: 1.5rem;
+    border-radius: var(--radius-lg);
     padding: 6rem;
     display: flex;
     justify-content: space-between;
@@ -798,7 +797,6 @@ section {
 .testimonials-cta .container-cta .btn.subscribe-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
     color: var(--text-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1.5rem 4rem;
     font-size: var(--fs-lead);
     white-space: nowrap;
@@ -806,8 +804,6 @@ section {
 
 .testimonials-cta .container-cta .btn.subscribe-btn:hover {
     background: linear-gradient(135deg, var(--tertiary-color), var(--primary-color));
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0.8rem 2rem rgba(14, 165, 233, 0.35);
 }
 
 .testimonials-cta .container-reviews {
@@ -830,7 +826,6 @@ section {
     background: var(--card-bg);
     padding: 3rem;
     text-align: center;
-    border: 1px solid var(--border-color);
 }
 
 .testimonials-cta .review-stars {
@@ -1013,18 +1008,15 @@ section {
 
 .legal-page-content .legal-back-btn {
     margin-top: 5rem;
-    padding: 1.2rem 3rem;
     background: var(--primary-color);
     color: var(--text-light);
     font-size: var(--fs-body);
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .legal-page-content .legal-back-btn:hover {
     background: var(--secondary-color);
-    transform: translateY(-2px);
 }
 
 /* Media Queries for responsive design */
