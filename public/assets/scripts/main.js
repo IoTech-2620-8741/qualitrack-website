@@ -79,13 +79,13 @@ function applyTranslations(lang) {
 }
 
 // ---- Shared header and footer ----
-// Each page has <div id="header-placeholder"> and <div id="footer-placeholder">, replaced by
-// public/_header.html and public/_footer.html. In those files {{home}} is the home page ("" on the
+// Each page has <div id="header-placeholder">, <div id="footer-placeholder"> and <div id="language-switcher-placeholder">, replaced by
+// public/_header.html, public/_footer.html and public/_language-switcher.html. In those files {{home}} is the home page ("" on the
 // home page itself, so its links only scroll) and {{root}} is the root of the site.
 function loadSharedLayout() {
     var homeUrl = new URL('index.html', SITE_ROOT);
     var onHome = location.pathname === new URL(SITE_ROOT).pathname || location.pathname === homeUrl.pathname;
-    var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html']];
+    var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html'], ['language-switcher-placeholder', '_language-switcher.html']];
 
     return Promise.all(parts.map(function (part) {
         var placeholder = document.getElementById(part[0]);
@@ -155,18 +155,32 @@ function initPage() {
 
     toggleBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            toggleBtns.forEach(function (b) { b.classList.remove('active'); });
+            toggleBtns.forEach(function (b) {
+                b.classList.remove('active');
+            });
             btn.classList.add('active');
 
             var plan = btn.dataset.plan;
             if (plan === 'monthly') {
-                monthlyPrices.forEach(function (el) { el.style.display = ''; });
-                annuallyPrices.forEach(function (el) { el.style.display = 'none'; });
-                annualSaveLabels.forEach(function (el) { el.style.display = 'none'; });
+                monthlyPrices.forEach(function (el) {
+                    el.style.display = '';
+                });
+                annuallyPrices.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+                annualSaveLabels.forEach(function (el) {
+                    el.style.display = 'none';
+                });
             } else {
-                monthlyPrices.forEach(function (el) { el.style.display = 'none'; });
-                annuallyPrices.forEach(function (el) { el.style.display = ''; });
-                annualSaveLabels.forEach(function (el) { el.style.display = ''; });
+                monthlyPrices.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+                annuallyPrices.forEach(function (el) {
+                    el.style.display = '';
+                });
+                annualSaveLabels.forEach(function (el) {
+                    el.style.display = '';
+                });
             }
         });
     });
@@ -179,7 +193,9 @@ function initPage() {
         title.addEventListener('click', function () {
             var isOpen = item.classList.contains('active');
             // Close all
-            accordionItems.forEach(function (i) { i.classList.remove('active'); });
+            accordionItems.forEach(function (i) {
+                i.classList.remove('active');
+            });
             // Open clicked if it was closed
             if (!isOpen) {
                 item.classList.add('active');
@@ -205,7 +221,7 @@ function initPage() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12 });
+        }, {threshold: 0.12});
 
         revealEls.forEach(function (el) {
             el.classList.add('reveal-hidden');
