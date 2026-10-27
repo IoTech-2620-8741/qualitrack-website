@@ -133,16 +133,16 @@ function initPage() {
 
     // ---- Mobile Nav Toggle ----
     var menuBtn = document.getElementById('menu-btn');
-    var navbar = document.querySelector('.header .navbar');
+    var menuWrapper = document.querySelector('.header .menu-wrapper');
 
-    if (menuBtn && navbar) {
+    if (menuBtn && menuWrapper) {
         menuBtn.addEventListener('click', function () {
-            navbar.classList.toggle('active');
+            menuWrapper.classList.toggle('active');
         });
         // Close on nav link click (mobile)
-        navbar.querySelectorAll('a').forEach(function (link) {
+        menuWrapper.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
-                navbar.classList.remove('active');
+                menuWrapper.classList.remove('active');
             });
         });
     }
