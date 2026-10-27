@@ -51,10 +51,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    outline: none;
     border: none;
     text-decoration: none;
-    transition: 0.2s linear;
+}
+
+a, button {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Visible focus for keyboard navigation only */
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 html {
@@ -1196,5 +1204,22 @@ section {
 
     .home .hero-content-wrapper h1 {
         font-size: 3.5rem;
+    }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal-hidden {
+        opacity: 1;
+        transform: none;
     }
 }
