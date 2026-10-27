@@ -1096,6 +1096,7 @@ section {
 @media (max-width: 768px) {
     .header .fa-bars {
         display: block;
+        margin-left: auto;
     }
 
     .header .menu-wrapper {
@@ -1115,7 +1116,8 @@ section {
         margin-right: 0;
     }
 
-    .header .menu-wrapper.active {
+    .header .menu-wrapper.active,
+    .header .menu-wrapper:has(.navbar.active) {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         display: flex;
     }
