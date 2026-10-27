@@ -55,6 +55,35 @@ const En = {
         }
     },
 
+        "privacy": {
+            "title": "8. Confidentiality and Data Protection",
+            "content": "QualiTrack is committed to maintaining the confidentiality of laboratory information and implementing appropriate technical and organizational measures to protect processed data. Please refer to our <a href=\"policies.html\">Privacy Policy</a> for further details on the processing of personal data."
+        },
+        "sla": {
+            "title": "9. Service Availability (SLA)",
+            "content": "QualiTrack strives to maintain a service availability of 99.5% per month. Planned maintenance periods will be communicated with at least 48 hours' notice. QualiTrack shall not be liable for service interruptions caused by factors beyond its control, including client connectivity failures or third-party cyberattacks."
+        },
+        "liability": {
+            "title": "10. Limitation of Liability",
+            "content": "To the maximum extent permitted by law, QualiTrack shall not be liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or reputation, arising from the use or inability to use the service. QualiTrack's total liability to the user shall not exceed the amount paid in the 3 months prior to the event giving rise to the claim."
+        },
+        "modifications": {
+            "title": "11. Modifications to the Terms",
+            "content": "QualiTrack reserves the right to modify these Terms of Service at any time. Material changes will be notified at least 30 days in advance. Continued use of the service after notification constitutes acceptance of the new terms."
+        },
+        "termination": {
+            "title": "12. Termination",
+            "content": "Either party may cancel the subscription with 30 days' prior notice. Upon termination, the laboratory will have a 60-day period to export its data. After that period, data may be deleted from QualiTrack's servers, except where legally required to be retained."
+        },
+        "jurisdiction": {
+            "title": "13. Governing Law and Jurisdiction",
+            "content": "These Terms are governed by the laws of the Republic of Peru. Any dispute that cannot be resolved amicably will be submitted to the competent courts of Metropolitan Lima."
+        },
+        "contact": {
+            "title": "14. Contact",
+            "content": "For inquiries regarding these Terms of Service:<br/><strong>Email:</strong> legal@qualitrack.pe<br/><strong>Address:</strong> Lima, Peru"
+        },
+    
     "nav": {
         "home": "Home",
         "features": "Features",
