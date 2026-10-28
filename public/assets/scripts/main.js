@@ -70,8 +70,8 @@ function applyTranslations(lang) {
     });
 
     // Update active button state on the floating switcher
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    document.querySelectorAll('.language-button').forEach(function (button) {
+        button.classList.toggle('active', button.dataset.lang === lang);
     });
 
     // Update <html lang>
@@ -123,20 +123,20 @@ function initPage() {
     applyTranslations(currentLang);
 
     // Floating switcher buttons
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            currentLang = btn.dataset.lang;
+    document.querySelectorAll('.language-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+            currentLang = button.dataset.lang;
             localStorage.setItem('qs-lang', currentLang);
             applyTranslations(currentLang);
         });
     });
 
     // ---- Mobile Nav Toggle ----
-    var menuBtn = document.getElementById('menu-btn');
+    var menuButton = document.getElementById('menu-button');
     var menuWrapper = document.querySelector('.header .menu-wrapper');
 
-    if (menuBtn && menuWrapper) {
-        menuBtn.addEventListener('click', function () {
+    if (menuButton && menuWrapper) {
+        menuButton.addEventListener('click', function () {
             menuWrapper.classList.toggle('active');
         });
         // Close on nav link click (mobile)
@@ -148,19 +148,19 @@ function initPage() {
     }
 
     // ---- Plans toggle (Monthly / Annually) ----
-    var toggleBtns = document.querySelectorAll('.toggle-btn');
+    var toggleButtons = document.querySelectorAll('.toggle-button');
     var monthlyPrices = document.querySelectorAll('.monthly-price');
     var annuallyPrices = document.querySelectorAll('.annually-price');
     var annualSaveLabels = document.querySelectorAll('.annual-save');
 
-    toggleBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            toggleBtns.forEach(function (b) {
+    toggleButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            toggleButtons.forEach(function (b) {
                 b.classList.remove('active');
             });
-            btn.classList.add('active');
+            button.classList.add('active');
 
-            var plan = btn.dataset.plan;
+            var plan = button.dataset.plan;
             if (plan === 'monthly') {
                 monthlyPrices.forEach(function (el) {
                     el.style.display = '';
@@ -238,10 +238,10 @@ function initPage() {
     }
 
     // ---- Footer subscribe ----
-    var subscribeBtn = document.querySelector('.top-footer .subscribe-btn');
+    var subscribeButton = document.querySelector('.top-footer .subscribe-button');
     var subscribeInput = document.querySelector('.top-footer input[type="email"]');
-    if (subscribeBtn && subscribeInput) {
-        subscribeBtn.addEventListener('click', function () {
+    if (subscribeButton && subscribeInput) {
+        subscribeButton.addEventListener('click', function () {
             var email = subscribeInput.value.trim();
             if (!email || !email.includes('@')) {
                 subscribeInput.style.borderColor = '#e74c3c';
@@ -249,7 +249,7 @@ function initPage() {
             }
             subscribeInput.style.borderColor = '';
             subscribeInput.value = '';
-            subscribeBtn.textContent = currentLang === 'es' ? '✅ ¡Enviado!' : '✅ Sent!';
+            subscribeButton.textContent = currentLang === 'es' ? '✅ ¡Enviado!' : '✅ Sent!';
             setTimeout(function () {
                 applyTranslations(currentLang); // restore button text
             }, 3000);
