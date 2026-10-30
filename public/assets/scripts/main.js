@@ -152,6 +152,26 @@ function initPage() {
     var monthlyPrices = document.querySelectorAll('.monthly-price');
     var annuallyPrices = document.querySelectorAll('.annually-price');
     var annualSaveLabels = document.querySelectorAll('.annual-save');
+    var planCards = document.querySelectorAll('.plan-card');
+
+    //Subscription plan values map
+    var SUBSCRIPTION_PLAN_MAP = {
+        standard: 'BASIC',
+        enterprise: 'ENTERPRISE'
+    };
+
+    //Update subscription plan links acording to selected button
+    function updatePlanLinks(selectedToggle) {
+        var billingCycle = selectedToggle === 'annually' ? 'YEARLY' : 'MONTHLY';
+        planCards.forEach(function (card) {
+            var planKey = card.dataset.planType;
+            var planValue = SUBSCRIPTION_PLAN_MAP[planKey];
+            var ctaLink = card.querySelector('a.button');
+            if (planValue && ctaLink) {
+                ctaLink.href = 'https://qualitrack-iotech.web.app/iam/sign-up?plan=' + planValue + '&billingCycle=' + billingCycle;
+            }
+        });
+    }
 
     toggleButtons.forEach(function (button) {
         button.addEventListener('click', function () {
@@ -182,6 +202,9 @@ function initPage() {
                     el.style.display = '';
                 });
             }
+
+            // Updates subscription plan links
+            updatePlanLinks(plan);
         });
     });
 
