@@ -253,9 +253,9 @@ const En = {
             },
             "product": {
                 "heading": "Product",
-                "link1": "Features",
-                "link2": "Pricing Plans",
-                "link3": "How It Works"
+                "features": "Features",
+                "pricingPlans": "Pricing Plans",
+                "howItWorks": "How It Works"
             },
             "contact": {
                 "heading": "Contact",
