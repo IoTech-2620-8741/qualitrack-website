@@ -189,15 +189,15 @@ const En = {
             "monthly": "Monthly",
             "annually": "Annually",
             "save": "Save 15% annually",
-            "features_heading": "Features",
+            "featuresHeading": "Features",
             "standard": {
                 "title": "Standard Lab Plan",
                 "description": "Designed for private pharmaceutical laboratories of medium size seeking to digitize their quality assurance processes, eliminate manual records, and ensure BPM compliance with DIGEMID.",
                 "price": {
                     "monthly": "$199",
-                    "monthly_unit": "/Per month",
+                    "monthlyUnit": "/Per month",
                     "annually": "$1,990",
-                    "annually_unit": "/Per year"
+                    "annuallyUnit": "/Per year"
                 },
                 "cta": "Get Standard Plan",
                 "feature1": "Up to 5 connected IoT devices (autoclaves, pH meters, sensors).",
@@ -212,9 +212,9 @@ const En = {
                 "description": "The comprehensive solution for large pharmaceutical institutions and public health entities such as the INS, requiring advanced integration, scalability, and the highest standard of regulatory compliance.",
                 "price": {
                     "monthly": "$599",
-                    "monthly_unit": "/Per month",
+                    "monthlyUnit": "/Per month",
                     "annually": "$5,990",
-                    "annually_unit": "/Per year"
+                    "annuallyUnit": "/Per year"
                 },
                 "cta": "Get Enterprise Plan",
                 "feature1": "Unlimited IoT device connections across multiple production lines.",
@@ -253,9 +253,9 @@ const En = {
             },
             "product": {
                 "heading": "Product",
-                "link1": "Features",
-                "link2": "Pricing Plans",
-                "link3": "How It Works"
+                "features": "Features",
+                "pricingPlans": "Pricing Plans",
+                "howItWorks": "How It Works"
             },
             "contact": {
                 "heading": "Contact",

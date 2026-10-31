@@ -83,7 +83,7 @@ function applyTranslations(lang) {
 // public/_header.html, public/_footer.html and public/_language-switcher.html. In those files {{home}} is the home page ("" on the
 // home page itself, so its links only scroll) and {{root}} is the root of the site.
 function loadSharedLayout() {
-    var homeUrl = new URL('index.html', SITE_ROOT);
+    var homeUrl = new URL('public/index.html', SITE_ROOT);
     var onHome = location.pathname === new URL(SITE_ROOT).pathname || location.pathname === homeUrl.pathname;
     var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html'], ['language-switcher-placeholder', '_language-switcher.html']];
 
