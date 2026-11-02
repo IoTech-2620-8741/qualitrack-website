@@ -12,12 +12,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - LICENSE.md with the MIT License.
 - CHANGELOG.md to record the changes of each version.
 - Language switcher and English and Spanish translations in the Privacy Policy page.
+- GitHub Actions workflow that deploys `public/` to GitHub Pages on every push to `main`.
 
 ### Changed
 
 - Internationalization: English is now the default language of the landing page, and the legal pages declare English as their language.
 - Internationalization: the translation objects and their keys were renamed to clearer names.
 - Footer: the Terms of Service and Privacy Policy links now open in the same tab.
+- Deployment: the site is served from the root URL, and the legal pages moved from `/public/sections/` to `/sections/`.
+- README and CONTRIBUTING describe the current project structure and the deployment.
 
 ## [1.0.0] - 2026-10-08
 
