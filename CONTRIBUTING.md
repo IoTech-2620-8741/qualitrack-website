@@ -95,7 +95,7 @@ Commit messages must follow the [Conventional Commits v1.0.0](https://www.conven
 | `ci`       | Changes to the GitHub Actions deployment workflow             |
 
 ### Allowed Scopes
-Scopes name the area of the website that changes: `header`, `footer`, `hero`, `plans`, `team`, `layout`, `pages`, `tos`, `policies`, `i18n`, `design`, `a11y`, `images`, `readme`, `changelog`, `license`, `deploy`.
+Scopes name the area of the website that changes: `header`, `footer`, `hero`, `plans`, `team`, `layout`, `pages`, `tos`, `policies`, `i18n`, `design`, `a11y`, `images`, `readme`, `changelog`, `license`, `contributing` ,`deploy`.
 
 ### Examples
 - `feat(layout): load the shared header and footer from main.js`
