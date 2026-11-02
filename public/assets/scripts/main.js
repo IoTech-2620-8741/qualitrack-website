@@ -5,7 +5,8 @@ let currentLang = localStorage.getItem('qs-lang') || 'en';
 
 // Root of the site, taken from this script's location (public/assets/scripts/main.js), so the shared
 // header and footer work from index.html and from the pages in public/sections.
-var SITE_ROOT = new URL('../../../', document.currentScript.src).href;
+// Using Github Actions + Github Pages, public is now the root folder.
+var SITE_ROOT = new URL('../../', document.currentScript.src).href;
 
 // Flatten nested object: { "nav": { "home": "Inicio" } } → { "nav.home": "Inicio" }
 function flattenTranslations(obj, prefix) {
@@ -83,14 +84,14 @@ function applyTranslations(lang) {
 // public/_header.html, public/_footer.html and public/_language-switcher.html. In those files {{home}} is the home page ("" on the
 // home page itself, so its links only scroll) and {{root}} is the root of the site.
 function loadSharedLayout() {
-    var homeUrl = new URL('public/index.html', SITE_ROOT);
+    var homeUrl = new URL('index.html', SITE_ROOT);
     var onHome = location.pathname === new URL(SITE_ROOT).pathname || location.pathname === homeUrl.pathname;
     var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html'], ['language-switcher-placeholder', '_language-switcher.html']];
 
     return Promise.all(parts.map(function (part) {
         var placeholder = document.getElementById(part[0]);
         if (!placeholder) return null;
-        return fetch(SITE_ROOT + 'public/' + part[1])
+        return fetch(SITE_ROOT + part[1])
             .then(function (response) {
                 if (!response.ok) throw new Error(part[1] + ' could not be loaded');
                 return response.text();

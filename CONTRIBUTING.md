@@ -20,7 +20,7 @@ Thank you for contributing to the QualiTrack landing page! This document establi
 
 ## Project Structure
 
-The website is a static site built with HTML5, CSS3, and vanilla JavaScript. All the site lives under `public/`:
+The website is a static site built with HTML5, CSS3, and vanilla JavaScript. All the site lives under `public/`, which is published as the root of the site:
 
 ```text
 public/
@@ -42,7 +42,7 @@ public/
             └── es.js             # Spanish translations (Es)
 ```
 
-- **Shared layout**: pages do not copy the header, footer, or language switcher. They declare `<div id="header-placeholder">`, `<div id="footer-placeholder">`, and `<div id="language-switcher-placeholder">`, and `main.js` replaces them with the partials. Inside the partials, `{{home}}` is the landing page and `{{root}}` is the root of the site.
+- **Shared layout**: pages do not copy the header, footer, or language switcher. They declare `<div id="header-placeholder">`, `<div id="footer-placeholder">`, and `<div id="language-switcher-placeholder">`, and `main.js` replaces them with the partials. Inside the partials, `{{home}}` is the landing page and `{{root}}` is the root of the site (the `public/` folder).
 - **Partials** start with an underscore (`_header.html`) to show they are fragments, not pages.
 
 ---
@@ -92,9 +92,10 @@ Commit messages must follow the [Conventional Commits v1.0.0](https://www.conven
 | `refactor` | Restructuring code without changing its behavior              |
 | `perf`     | Changes that improve loading or rendering performance         |
 | `chore`    | Maintenance tasks that do not alter the website               |
+| `ci`       | Changes to the GitHub Actions deployment workflow             |
 
 ### Allowed Scopes
-Scopes name the area of the website that changes: `header`, `footer`, `hero`, `plans`, `team`, `layout`, `pages`, `tos`, `policies`, `i18n`, `design`, `a11y`, `images`, `readme`, `changelog`, `license`.
+Scopes name the area of the website that changes: `header`, `footer`, `hero`, `plans`, `team`, `layout`, `pages`, `tos`, `policies`, `i18n`, `design`, `a11y`, `images`, `readme`, `changelog`, `license`, `contributing` ,`deploy`.
 
 ### Examples
 - `feat(layout): load the shared header and footer from main.js`
@@ -102,6 +103,7 @@ Scopes name the area of the website that changes: `header`, `footer`, `hero`, `p
 - `style(design): make cards and buttons consistent`
 - `refactor(pages): align policies.html and tos.html id names with the naming conventions`
 - `docs(changelog): add changelog with version 1.0.0`
+- `ci(deploy): deploy public/ to GitHub Pages with GitHub Actions`
 
 Keep each commit small and focused on one change.
 
@@ -190,6 +192,9 @@ The VS Code **Live Server** extension also works.
 - Mobile menu, features accordion, monthly/annual plans toggle, and language switcher.
 - Terms of Service and Privacy Policy pages.
 - No errors in the browser console.
+
+### Deployment
+The site is published with GitHub Pages at `https://iotech-2620-8741.github.io/qualitrack-website/`. Every push to `main` runs the `Deploy to GitHub Pages` workflow (`.github/workflows/deploy.yml`), which publishes `public/` as the root of the site, so pages are served without the `public/` prefix (for example, `/sections/tos.html`). The workflow can also be run manually from the **Actions** tab.
 
 ---
 
