@@ -1,7 +1,8 @@
 const Es = {
     
     "tos": {
-        "back": "← Volver al inicio",
+        "button": "← Inicio",
+        "back": "Volver",
         "title": "Términos de Servicio",
         "lastUpdated": "Última actualización: abril de 2025",
         "introduction": "Bienvenido a <strong>QualiTrack</strong>, una plataforma SaaS para la gestión de calidad farmacéutica (QMS) desarrollada por <strong>IoTech</strong>. Al acceder a nuestra plataforma o utilizarla, usted acepta quedar sujeto a estos Términos de Servicio. Léalos detenidamente antes de utilizar el servicio.",
@@ -269,7 +270,8 @@ const Es = {
         }
     },
     "policies": {
-        "button": "← Volver al Inicio",
+        "button": "← Inicio",
+        "back": "Volver",
         "title": "Política de Privacidad",
         "update": "Última actualización: Octubre 2026",
         "description": `En <strong>QualiTrack</strong>, desarrollado por

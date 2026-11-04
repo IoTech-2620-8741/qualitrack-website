@@ -1,7 +1,8 @@
 const En = {
     
     "tos": {
-        "back": "← Back to Home",
+        "button": "← Home",
+        "back": "Go Back",
         "title": "Terms of Service",
         "lastUpdated": "Last updated: April 2025",
         "introduction": "Welcome to <strong>QualiTrack</strong>, a SaaS platform for Pharmaceutical Quality Management (QMS) developed by <strong>IoTech</strong>. By accessing or using our platform, you agree to be bound by these Terms of Service. Please read them carefully before using the service.",
@@ -270,7 +271,8 @@ const En = {
             
         },
         "policies": {
-            "button": "← Go Back",
+            "button": "← Home",
+            "back": "Go back",
             "title": "Privacy Policy",
             "update": "Last Update: October 2026",
             "description": `At <strong>QualiTrack</strong>, developed by
