@@ -85,31 +85,59 @@ function applyTranslations(lang) {
 // home page itself, so its links only scroll) and {{root}} is the root of the site.
 function loadSharedLayout() {
     var homeUrl = new URL('index.html', SITE_ROOT);
-    var onHome = location.pathname === new URL(SITE_ROOT).pathname || location.pathname === homeUrl.pathname;
-    var parts = [['header-placeholder', '_header.html'], ['footer-placeholder', '_footer.html'], ['language-switcher-placeholder', '_language-switcher.html']];
+    var onHome = location.pathname === new URL(SITE_ROOT).pathname ||
+                 location.pathname === homeUrl.pathname;
+
+    var parts = [
+        ['header-placeholder', '_header.html'],
+        ['footer-placeholder', '_footer.html']
+    ];
 
     return Promise.all(parts.map(function (part) {
         var placeholder = document.getElementById(part[0]);
-        if (!placeholder) return null;
+        if (!placeholder) return Promise.resolve();
+
         return fetch(SITE_ROOT + part[1])
             .then(function (response) {
-                if (!response.ok) throw new Error(part[1] + ' could not be loaded');
+                if (!response.ok) {
+                    throw new Error(part[1] + ' could not be loaded');
+                }
                 return response.text();
             })
             .then(function (html) {
                 var template = document.createElement('template');
+
                 template.innerHTML = html
                     .replace(/\{\{home\}\}/g, onHome ? '' : homeUrl.href)
                     .replace(/\{\{root\}\}/g, SITE_ROOT);
-                var element = template.content.firstElementChild;
-                // Pages without a hero image keep the solid header (data-solid on the placeholder).
+
                 if (placeholder.hasAttribute('data-solid')) {
+                    var element = template.content.firstElementChild;
                     element.classList.add('scrolled');
                     element.dataset.solid = 'true';
                 }
+
                 placeholder.replaceWith(template.content);
             });
-    }));
+    })).then(function () {
+
+        var switcherPlaceholder = document.getElementById(
+            'language-switcher-placeholder'
+        );
+
+        if (!switcherPlaceholder) return;
+
+        return fetch(SITE_ROOT + '_language-switcher.html')
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('_language-switcher.html could not be loaded');
+                }
+                return response.text();
+            })
+            .then(function (html) {
+                switcherPlaceholder.innerHTML = html;
+            });
+    });
 }
 
 // ---- Language Switcher ----
