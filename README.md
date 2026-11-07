@@ -50,35 +50,54 @@ This Landing Page was built with standard web technologies, prioritizing perform
 ## Project Structure
 
 ```
-IoTech-LandingPage/
-├── index.html                         # Main landing page
+qualitrack-website/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                 # Deploys public/ to GitHub Pages on every push to main
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE.md
 ├── README.md
-└── public/
+└── public/                            # Root of the published site
+    ├── index.html                     # Main landing page
+    ├── _header.html                   # Shared header (loaded by main.js)
+    ├── _footer.html                   # Shared footer (loaded by main.js)
+    ├── _language-switcher.html        # Shared floating language switcher (loaded by main.js)
     ├── assets/
     │   ├── styles/
     │   │   └── style.css              # Global stylesheet + branding variables
     │   ├── scripts/
-    │   │   ├── main.js                # i18n engine, accordion, plans toggle, animations
+    │   │   ├── main.js                # Shared layout, i18n engine, accordion, plans toggle, animations
     │   │   └── translations/
-    │   │       ├── en.js              # English translations (translationsEN)
-    │   │       └── es.js              # Spanish translations (translationsES)
-    │   └── images/                    # Team photos, logo, hero image
+    │   │       ├── en.js              # English translations (En)
+    │   │       └── es.js              # Spanish translations (Es)
+    │   └── images/                    # Team photos, logo, section images
     └── sections/
         ├── tos.html                   # Terms of Service
-        └── policies.html             # Privacy Policy (Ley N° 29733)
+        └── policies.html              # Privacy Policy (Ley N° 29733)
 ```
 
 ---
 
-## Version 1.0.0
+## Deployment
 
-First stable release of the QualiTrack Landing Page.
+The site is published with **GitHub Pages** at [iotech-2620-8741.github.io/qualitrack-website](https://iotech-2620-8741.github.io/qualitrack-website/).
+
+Every push to `main` runs the `Deploy to GitHub Pages` workflow (`.github/workflows/deploy.yml`), which publishes the `public/` folder as the root of the site. The workflow can also be run manually from the **Actions** tab.
+
+---
+
+## Version 1.1.0
+
+Stable release with changes in project structure and deployment.
 
 - Responsive landing page with hero, key features, subscription plans, and team sections.
 - Full English (EN) and Spanish (ES) internationalization with a floating language switcher.
 - Plan pricing with monthly/annual billing toggle (15% annual discount).
 - Interactive accordion, scroll-reveal animations, and sticky header.
 - Terms of Service and Privacy Policy (Ley N° 29733) pages.
+- Deployment using Github Workflow plus Github Pages
+- Qualitrack license added.
 
 ---
 

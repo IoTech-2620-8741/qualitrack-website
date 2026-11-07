@@ -1,7 +1,12 @@
 // ---- QualiTrack – main.js ----
 // Language switching with nested dot-notation keys (e.g. "nav.home")
 
-let currentLang = localStorage.getItem('qs-lang') || 'es';
+let currentLang = localStorage.getItem('qs-lang') || 'en';
+
+// Root of the site, taken from this script's location (public/assets/scripts/main.js), so the shared
+// header and footer work from index.html and from the pages in public/sections.
+// Using Github Actions + Github Pages, public is now the root folder.
+var SITE_ROOT = new URL('../../', document.currentScript.src).href;
 
 // Flatten nested object: { "nav": { "home": "Inicio" } } → { "nav.home": "Inicio" }
 function flattenTranslations(obj, prefix) {
@@ -19,7 +24,7 @@ function flattenTranslations(obj, prefix) {
 
 function applyTranslations(lang) {
     // Pick the correct global translation object
-    var source = lang === 'en' ? translationsEN : translationsES;
+    var source = lang === 'en' ? En : Es;
     var flat = flattenTranslations(source);
 
     // Apply to [data-i18n]
@@ -66,64 +71,169 @@ function applyTranslations(lang) {
     });
 
     // Update active button state on the floating switcher
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    document.querySelectorAll('.language-button').forEach(function (button) {
+        button.classList.toggle('active', button.dataset.lang === lang);
     });
 
     // Update <html lang>
     document.documentElement.lang = lang;
 }
 
+// ---- Shared header and footer ----
+// Each page has <div id="header-placeholder">, <div id="footer-placeholder"> and <div id="language-switcher-placeholder">, replaced by
+// public/_header.html, public/_footer.html and public/_language-switcher.html. In those files {{home}} is the home page ("" on the
+// home page itself, so its links only scroll) and {{root}} is the root of the site.
+function loadSharedLayout() {
+    var homeUrl = new URL('index.html', SITE_ROOT);
+    var onHome = location.pathname === new URL(SITE_ROOT).pathname ||
+                 location.pathname === homeUrl.pathname;
+
+    var parts = [
+        ['header-placeholder', '_header.html'],
+        ['footer-placeholder', '_footer.html']
+    ];
+
+    return Promise.all(parts.map(function (part) {
+        var placeholder = document.getElementById(part[0]);
+        if (!placeholder) return Promise.resolve();
+
+        return fetch(SITE_ROOT + part[1])
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error(part[1] + ' could not be loaded');
+                }
+                return response.text();
+            })
+            .then(function (html) {
+                var template = document.createElement('template');
+
+                template.innerHTML = html
+                    .replace(/\{\{home\}\}/g, onHome ? '' : homeUrl.href)
+                    .replace(/\{\{root\}\}/g, SITE_ROOT);
+
+                if (placeholder.hasAttribute('data-solid')) {
+                    var element = template.content.firstElementChild;
+                    element.classList.add('scrolled');
+                    element.dataset.solid = 'true';
+                }
+
+                placeholder.replaceWith(template.content);
+            });
+    })).then(function () {
+
+        var switcherPlaceholder = document.getElementById(
+            'language-switcher-placeholder'
+        );
+
+        if (!switcherPlaceholder) return;
+
+        return fetch(SITE_ROOT + '_language-switcher.html')
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('_language-switcher.html could not be loaded');
+                }
+                return response.text();
+            })
+            .then(function (html) {
+                switcherPlaceholder.innerHTML = html;
+            });
+    });
+}
+
 // ---- Language Switcher ----
 document.addEventListener('DOMContentLoaded', function () {
+    loadSharedLayout().then(initPage, function (error) {
+        console.warn('Shared layout not loaded:', error);
+        initPage();
+    });
+});
+
+function initPage() {
     applyTranslations(currentLang);
 
     // Floating switcher buttons
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            currentLang = btn.dataset.lang;
+    document.querySelectorAll('.language-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+            currentLang = button.dataset.lang;
             localStorage.setItem('qs-lang', currentLang);
             applyTranslations(currentLang);
         });
     });
 
     // ---- Mobile Nav Toggle ----
-    var menuBtn = document.getElementById('menu-btn');
-    var navbar = document.querySelector('.header .navbar');
+    var menuButton = document.getElementById('menu-button');
+    var menuWrapper = document.querySelector('.header .menu-wrapper');
 
-    if (menuBtn && navbar) {
-        menuBtn.addEventListener('click', function () {
-            navbar.classList.toggle('active');
+    if (menuButton && menuWrapper) {
+        menuButton.addEventListener('click', function () {
+            menuWrapper.classList.toggle('active');
         });
         // Close on nav link click (mobile)
-        navbar.querySelectorAll('a').forEach(function (link) {
+        menuWrapper.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
-                navbar.classList.remove('active');
+                menuWrapper.classList.remove('active');
             });
         });
     }
 
     // ---- Plans toggle (Monthly / Annually) ----
-    var toggleBtns = document.querySelectorAll('.toggle-btn');
+    var toggleButtons = document.querySelectorAll('.toggle-button');
     var monthlyPrices = document.querySelectorAll('.monthly-price');
     var annuallyPrices = document.querySelectorAll('.annually-price');
     var annualSaveLabels = document.querySelectorAll('.annual-save');
+    var planCards = document.querySelectorAll('.plan-card');
 
-    toggleBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            toggleBtns.forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
+    //Subscription plan values map
+    var SUBSCRIPTION_PLAN_MAP = {
+        standard: 'BASIC',
+        enterprise: 'ENTERPRISE'
+    };
 
-            var plan = btn.dataset.plan;
-            if (plan === 'monthly') {
-                monthlyPrices.forEach(function (el) { el.style.display = ''; });
-                annuallyPrices.forEach(function (el) { el.style.display = 'none'; });
-                annualSaveLabels.forEach(function (el) { el.style.display = 'none'; });
-            } else {
-                monthlyPrices.forEach(function (el) { el.style.display = 'none'; });
-                annuallyPrices.forEach(function (el) { el.style.display = ''; });
-                annualSaveLabels.forEach(function (el) { el.style.display = ''; });
+    //Update subscription plan links acording to selected button
+    function updatePlanLinks(selectedToggle) {
+        var billingCycle = selectedToggle === 'annually' ? 'YEARLY' : 'MONTHLY';
+        planCards.forEach(function (card) {
+            var planKey = card.dataset.planType;
+            var planValue = SUBSCRIPTION_PLAN_MAP[planKey];
+            var ctaLink = card.querySelector('a.button');
+            if (planValue && ctaLink) {
+                ctaLink.href = 'https://qualitrack-iotech.web.app/iam/sign-up?plan=' + planValue + '&billingCycle=' + billingCycle;
             }
+        });
+    }
+
+    toggleButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            toggleButtons.forEach(function (b) {
+                b.classList.remove('active');
+            });
+            button.classList.add('active');
+
+            var plan = button.dataset.plan;
+            if (plan === 'monthly') {
+                monthlyPrices.forEach(function (el) {
+                    el.style.display = '';
+                });
+                annuallyPrices.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+                annualSaveLabels.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+            } else {
+                monthlyPrices.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+                annuallyPrices.forEach(function (el) {
+                    el.style.display = '';
+                });
+                annualSaveLabels.forEach(function (el) {
+                    el.style.display = '';
+                });
+            }
+
+            // Updates subscription plan links
+            updatePlanLinks(plan);
         });
     });
 
@@ -135,7 +245,9 @@ document.addEventListener('DOMContentLoaded', function () {
         title.addEventListener('click', function () {
             var isOpen = item.classList.contains('active');
             // Close all
-            accordionItems.forEach(function (i) { i.classList.remove('active'); });
+            accordionItems.forEach(function (i) {
+                i.classList.remove('active');
+            });
             // Open clicked if it was closed
             if (!isOpen) {
                 item.classList.add('active');
@@ -161,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12 });
+        }, {threshold: 0.12});
 
         revealEls.forEach(function (el) {
             el.classList.add('reveal-hidden');
@@ -173,15 +285,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('.header');
     if (header) {
         window.addEventListener('scroll', function () {
-            header.classList.toggle('scrolled', window.scrollY > 10);
+            header.classList.toggle('scrolled', header.dataset.solid === 'true' || window.scrollY > 10);
         });
     }
 
     // ---- Footer subscribe ----
-    var subscribeBtn = document.querySelector('.top-footer .subscribe-btn');
+    var subscribeButton = document.querySelector('.top-footer .subscribe-button');
     var subscribeInput = document.querySelector('.top-footer input[type="email"]');
-    if (subscribeBtn && subscribeInput) {
-        subscribeBtn.addEventListener('click', function () {
+    if (subscribeButton && subscribeInput) {
+        subscribeButton.addEventListener('click', function () {
             var email = subscribeInput.value.trim();
             if (!email || !email.includes('@')) {
                 subscribeInput.style.borderColor = '#e74c3c';
@@ -189,10 +301,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             subscribeInput.style.borderColor = '';
             subscribeInput.value = '';
-            subscribeBtn.textContent = currentLang === 'es' ? '✅ ¡Enviado!' : '✅ Sent!';
+            subscribeButton.textContent = currentLang === 'es' ? '✅ ¡Enviado!' : '✅ Sent!';
             setTimeout(function () {
                 applyTranslations(currentLang); // restore button text
             }, 3000);
         });
     }
-});
+}
