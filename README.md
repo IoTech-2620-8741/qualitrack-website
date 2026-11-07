@@ -87,15 +87,17 @@ Every push to `main` runs the `Deploy to GitHub Pages` workflow (`.github/workfl
 
 ---
 
-## Version 1.0.0
+## Version 1.1.0
 
-First stable release of the QualiTrack Landing Page.
+Stable release with changes in project structure and deployment.
 
 - Responsive landing page with hero, key features, subscription plans, and team sections.
 - Full English (EN) and Spanish (ES) internationalization with a floating language switcher.
 - Plan pricing with monthly/annual billing toggle (15% annual discount).
 - Interactive accordion, scroll-reveal animations, and sticky header.
 - Terms of Service and Privacy Policy (Ley N° 29733) pages.
+- Deployment using Github Workflow plus Github Pages
+- Qualitrack license added.
 
 ---
 
