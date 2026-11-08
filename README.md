@@ -67,7 +67,11 @@ qualitrack-website/
     │   ├── styles/
     │   │   └── style.css              # Global stylesheet + branding variables
     │   ├── scripts/
-    │   │   ├── main.js                # Shared layout, i18n engine, accordion, plans toggle, animations
+    │   │   ├── main.js                # Entry point (ES module): initPage() calls the setup functions
+    │   │   ├── config/                # constants.js (site root, language codes, plan codes)
+    │   │   ├── core/                  # dom.js (partials), i18n.js (translations), state.js (current language)
+    │   │   ├── ui/                    # layout.js (header, footer, menu), accordion.js, plans.js, animations.js
+    │   │   ├── utils/                 # a11y.js (accessibility helpers)
     │   │   └── translations/
     │   │       ├── en.js              # English translations (En)
     │   │       └── es.js              # Spanish translations (Es)
