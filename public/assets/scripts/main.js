@@ -6,27 +6,30 @@ import { setupAccordion } from './ui/accordion.js';
 import { setupScrollReveal } from './ui/animations.js';
 import { hideDecorativeIcons } from './utils/a11y.js';
 
+// Initializes all page features. Runs after the shared header/footer are in the DOM.
 function initPage() {
     hideDecorativeIcons();
     setupLanguageSwitcher();
-    setupMobileMenu();      
+    setupMobileMenu();
     setupPlansToggle();
     setupAccordion();
     setupScrollReveal();
-    setupHeaderShadow();     
+    setupHeaderShadow();
     applyTranslations(state.currentLanguageCode);
 }
 
+// Entry point: detects the language, loads the shared layout, then starts the page.
 async function startSite() {
     initializeLanguage();
     try {
-        await loadSharedLayout(); 
+        await loadSharedLayout();
     } catch (error) {
         console.warn('No se cargó el layout compartido:', error);
     }
-    initPage();  
+    initPage();
 }
 
+// Start once the DOM is ready (or immediately if it already is).
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', startSite);
 } else {
