@@ -55,21 +55,9 @@ export function setupMobileMenu() {
     }
 }
 
-// Downloads the language switcher partial. Returns null if it fails.
-async function fetchLanguageSwitcherHtml() {
-    try {
-        return await fetchPartial('_language-switcher.html');
-    } catch (error) {
-        console.warn('No se cargó el selector de idioma:', error);
-        return null;
-    }
-}
-
 // Inserts the language switcher in the first placeholder and removes any extra ones
 // (the header partial and the page can both include a placeholder).
 function insertLanguageSwitcher(languageSwitcherHtml) {
-    if (!languageSwitcherHtml) return;
-
     const placeholders = document.querySelectorAll('[id="language-switcher-placeholder"]');
     for (let index = 0; index < placeholders.length; index++) {
         if (index === 0) {
