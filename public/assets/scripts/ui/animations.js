@@ -1,3 +1,5 @@
+// IntersectionObserver callback: shows an element once it enters the viewport,
+// then stops observing it so the animation only runs once.
 function revealVisibleElements(entries, observer) {
     for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -7,6 +9,8 @@ function revealVisibleElements(entries, observer) {
     }
 }
 
+// Adds a fade-in effect on scroll to cards and sections.
+// Skipped when the user prefers reduced motion or the browser lacks IntersectionObserver.
 export function setupScrollReveal() {
     const prefersReducedMotion = window.matchMedia &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
