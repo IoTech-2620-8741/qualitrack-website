@@ -1,5 +1,6 @@
 import { makeKeyboardActivatable } from '../utils/a11y.js';
 
+// Opens or closes one accordion item and updates its aria-expanded state.
 function setAccordionItemOpen(accordionItem, isOpen) {
     accordionItem.classList.toggle('active', isOpen);
     const title = accordionItem.querySelector('.accordion-title');
@@ -8,6 +9,7 @@ function setAccordionItemOpen(accordionItem, isOpen) {
     }
 }
 
+// Click handler: closes all items, then opens the clicked one (unless it was already open).
 function onAccordionTitleClick(event) {
     const clickedItem = event.currentTarget.closest('.accordion-item');
     const wasOpen = clickedItem.classList.contains('active');
@@ -21,6 +23,8 @@ function onAccordionTitleClick(event) {
     }
 }
 
+// Sets up the accordion: links titles to panels with aria-controls,
+// adds click and keyboard support, and opens the first item by default.
 export function setupAccordion() {
     const accordionItems = document.querySelectorAll('.accordion-item');
     if (accordionItems.length === 0) return;
