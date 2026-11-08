@@ -4,12 +4,15 @@ import {
     BILLING_CYCLE_CODE_BY_NAME
 } from '../config/constants.js';
 
+// Shows or hides a list of elements.
 function setElementsVisible(elements, isVisible) {
     for (const element of elements) {
         element.style.display = isVisible ? '' : 'none';
     }
 }
 
+// Updates each plan card's button so it links to the sign-up page
+// with the right plan and billing cycle in the URL.
 function updatePlanLinks(billingCycleName) {
     const billingCycleCode = BILLING_CYCLE_CODE_BY_NAME[billingCycleName];
 
@@ -29,6 +32,8 @@ function updatePlanLinks(billingCycleName) {
     }
 }
 
+// Selects a billing cycle (monthly or annually): highlights its toggle button,
+// shows the matching prices and updates the sign-up links.
 function selectBillingCycle(billingCycleName) {
     for (const toggleButton of document.querySelectorAll('.toggle-button')) {
         const isSelected = toggleButton.dataset.plan === billingCycleName;
@@ -43,10 +48,12 @@ function selectBillingCycle(billingCycleName) {
     updatePlanLinks(billingCycleName);
 }
 
+// Click handler for the monthly/annually toggle buttons.
 function onPlanToggleClick(event) {
     selectBillingCycle(event.currentTarget.dataset.plan);
 }
 
+// Sets up the billing toggle and applies the initially active cycle (monthly by default).
 export function setupPlansToggle() {
     const toggleButtons = document.querySelectorAll('.toggle-button');
     if (toggleButtons.length === 0) return;
