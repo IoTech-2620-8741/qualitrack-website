@@ -36,7 +36,11 @@ public/
     ├── styles/
     │   └── style.css             # Global stylesheet with design tokens in :root
     └── scripts/
-        ├── main.js               # Shared layout, i18n engine, menu, accordion, plans toggle, animations
+        ├── main.js               # Entry point (ES module): initPage() calls the setup functions
+        ├── config/               # constants.js (site root, language codes, plan codes)
+        ├── core/                 # dom.js (partials), i18n.js (translations), state.js (current language)
+        ├── ui/                   # layout.js (header, footer, menu), accordion.js, plans.js, animations.js
+        ├── utils/                # a11y.js (accessibility helpers)
         └── translations/
             ├── en.js             # English translations (En)
             └── es.js             # Spanish translations (Es)
@@ -148,7 +152,7 @@ Every release records its changes in `CHANGELOG.md`, following [Keep a Changelog
 ## JavaScript Guidelines
 
 - **Vanilla JavaScript only**: no frameworks or build tools.
-- **Single entry point**: page behavior goes in `public/assets/scripts/main.js`, inside `initPage()` when it needs the shared header or footer.
+- **Single entry point**: `public/assets/scripts/main.js` only starts the page. New behavior goes in a `setupX()` function in the matching module (`ui/`, `core/` or `utils/`), called from `initPage()` in `main.js` so it runs after the shared header and footer are loaded.
 - **Naming conventions**:
   - `camelCase`: variables and functions (`currentLang`, `applyTranslations`).
   - `UPPER_SNAKE_CASE`: global constants (`SITE_ROOT`).
