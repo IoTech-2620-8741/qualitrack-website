@@ -319,10 +319,6 @@ section {
     justify-content: center;
 }
 
-.header .mobile-cta {
-    display: none;
-}
-
 .header .buttons .sign-up:hover {
     background: var(--primary-hover);
 }
@@ -1174,29 +1170,7 @@ section {
 
     .header .fa-bars {
         display: block;
-    }
-
-    /* The call to action sits in the middle of the bar; the menu keeps the links and the language */
-    .header .mobile-cta {
-        display: inline-flex;
-        align-items: center;
-        min-height: 40px;
-        margin: 0 auto;
-        padding: 8px 16px;
-        border-radius: 999px;
-        background: var(--primary-strong);
-        color: var(--white);
-        font-size: 14px;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-
-    .header .mobile-cta:hover {
-        background: var(--primary-hover);
-    }
-
-    .header .buttons .sign-up {
-        display: none;
+        margin-left: auto;
     }
 
     .header .menu-wrapper {
