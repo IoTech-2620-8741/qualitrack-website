@@ -157,7 +157,7 @@ section {
 
 .what-we-offer .container, .benefits-grid-image {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
     gap: 3rem;
 }
 
@@ -438,7 +438,7 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     animation: float 3s ease-in-out infinite;
-    min-width: 40rem;
+    min-width: min(40rem, 100%); /* Never wider than a small phone */
     border: 1px solid var(--border-color);
 }
 
@@ -452,7 +452,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    min-width: 40rem;
+    min-width: min(40rem, 100%); /* Never wider than a small phone */
 }
 
 .features-accordion .accordion-item {
@@ -872,7 +872,7 @@ section {
 
 .testimonials-call-to-action .review-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     gap: 3rem;
     justify-content: center;
 }
@@ -1087,7 +1087,7 @@ section {
     }
 
     .what-we-offer .container, .benefits-grid-image {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     }
 
     .plans-container {
