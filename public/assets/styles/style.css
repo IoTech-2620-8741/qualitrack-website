@@ -1161,6 +1161,13 @@ section {
     .home .hero-content-wrapper {
         padding: 0;
     }
+
+    /* Once the hero stacks, its call to action sits in the middle of the screen */
+    .home .button-home {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
