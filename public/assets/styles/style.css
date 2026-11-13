@@ -332,13 +332,15 @@ section {
 /* Text and image side by side in a centered band, so a wide screen adds margin around them */
 .home {
     display: grid;
-    grid-template-columns: minmax(0, 60rem) minmax(0, 52rem);
+    grid-template-columns: minmax(0, 55rem) minmax(0, 52rem);
     justify-content: center;
     align-items: center;
     gap: clamp(4rem, 6vw, 9.6rem);
     width: 100%;
     max-width: 128rem;
-    padding: calc(64px + 5rem) 4rem 5rem;
+    /* Like the web app, the hero fills the first screen under the header and centers its content in it */
+    min-height: 100vh;
+    padding: calc(64px + 4rem) 4rem 4rem;
     background: var(--bg-light);
 }
 
@@ -348,7 +350,7 @@ section {
 }
 
 .home h1 {
-    font-size: var(--fs-display);
+    font-size: clamp(var(--fs-h1), 4vw, 5.6rem); /* Same size as the title of the web app */
     color: var(--heading-color);
     font-weight: 700;
     line-height: 1.2;
@@ -1120,6 +1122,7 @@ section {
 
     .home {
         grid-template-columns: minmax(0, 1fr);
+        min-height: 0;
         padding: calc(64px + 3rem) 4% 5rem;
     }
 
