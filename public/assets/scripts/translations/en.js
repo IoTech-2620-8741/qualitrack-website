@@ -219,9 +219,20 @@ const En = {
             "headingMain": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
             "vision": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
             "mission": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
-            "iotIntegration": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
-            "traceability": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
-            "compliance": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
+            "visionTitle": "Our Vision",
+            "missionTitle": "Our Misión",
+            "iotIntegration": {
+                "title": "Data Integrity",
+                "text": "Immutable and auditable records that comply with international regulatory requirements."
+            },
+            "traceability": {
+                "title": "IoT Integration",
+                "text": "Direct connection to autoclaves, pH meters, and sensors for automatic variable capture."
+            },
+            "compliance": {
+                "title": "Regulatory Compliance",
+                "text": "Immutable audit reports ready for DIGEMID inspections."
+            }
         },
         "team": {
             "heading": "Our Team",
