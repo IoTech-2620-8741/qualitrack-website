@@ -437,14 +437,16 @@ section {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    animation: float 3s ease-in-out infinite;
-    min-width: min(40rem, 100%); /* Never wider than a small phone */
-    border: 1px solid var(--border-color);
+    animation: float 2s ease-in-out infinite;
+    box-shadow: var(--shadow-md), 0 0 0 1px var(--border-color);
 }
 
 .features-accordion .video-container-split iframe {
+    display: block; /* An inline iframe leaves a gap under it */
     width: 100%;
     height: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
 }
 
 .features-accordion .accordion-container {
@@ -597,13 +599,15 @@ section {
     aspect-ratio: 16 / 9;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md), 0 0 0 1px var(--border-color);
 }
 
 .about-us .video-container iframe {
+    display: block;
     width: 100%;
     height: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
 }
 
 .our-team .heading {
@@ -1248,9 +1252,13 @@ section {
         max-width: 100%;
     }
 
+    .features-accordion .video-container-split, .about-us .video-container {
+        flex: 0 0 auto;
+    }
+
     .video-container iframe, .video-container-split iframe {
         width: 100%;
-        height: 30rem;
+        height: 100%;
     }
 
     .features-container-split {
