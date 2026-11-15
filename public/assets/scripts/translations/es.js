@@ -218,10 +218,21 @@ const Es = {
         "headingLead": "QualiTrack:",
         "headingMain": "Transformando la Gestión de Calidad Farmacéutica con IoT y Cumplimiento Normativo",
         "vision": "QualiTrack nace con una visión clara: digitalizar y transformar la supervisión de los procesos de fabricación en laboratorios farmacéuticos. Combinamos la solidez de una arquitectura de software empresarial con la innovación del Internet de las Cosas (IoT), garantizando que las instituciones de salud cumplan rigurosamente con las Buenas Prácticas de Manufactura (BPM) exigidas por entidades como DIGEMID.",
+        "visionTitle": "Nuestra Visión",
+        "missionTitle": "Nuestra Misión",
         "mission": "Somos una plataforma especializada en cumplimiento regulatorio — un escudo contra fallas de producción y un compromiso hacia una nueva era de manufactura farmacéutica inteligente y transparente.",
-        "iotIntegration": "Integración IoT: Captura automática de pH, temperatura y presión desde equipos industriales.",
-        "traceability": "Trazabilidad Inmutable: Registros a prueba de manipulación con firmas digitales y auditorías completas.",
-        "compliance": "Cumplimiento Regulatorio: Soporte nativo para requisitos BPM de DIGEMID, normas ISO y principios de Integridad de Datos."
+        "iotIntegration": {
+            "title": "Integridad de Datos",
+            "text": "Registros inmutables y auditables que cumplen con los requisitos regulatorios internacionales."
+        },
+        "traceability": {
+            "title": "Integración IoT",
+            "text": "Conexión directa con autoclaves, medidores de pH y sensores para la captura automática de variables."
+        },
+        "compliance": {
+            "title": "Cumplimiento Normativo",
+            "text": "Informes de auditoría inmutables listos para inspecciones de DIGEMID."
+        }
     },
     "team": {
         "heading": "Nuestro Equipo",
