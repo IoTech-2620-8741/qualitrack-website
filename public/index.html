@@ -250,7 +250,36 @@
             </div>
         </article>
 
-
+        <!-- LED -->
+        <div class="led-legend">
+            <h3 data-i18n="devices.led.title">Read the state at a glance</h3>
+            <p data-i18n="devices.led.intro">
+                Each device uses a single light. The pattern matters as much as the color, and the screen and the app repeat the same state in text.
+            </p>
+            <ul class="led-states">
+                <li class="led-normal">
+                    <span class="led-dot led-normal" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.normal.name">Normal</strong>
+                        <p data-i18n="devices.led.normal.text">Green, slow pulse. Everything is within range.</p>
+                    </div>
+                </li>
+                <li class="led-warning">
+                    <span class="led-dot led-warning" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.warning.name">Warning</strong>
+                        <p data-i18n="devices.led.warning.text">Yellow, slow blink. A reading left its normal range.</p>
+                    </div>
+                </li>
+                <li class="led-critical">
+                    <span class="led-dot led-critical" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.critical.name">Critical</strong>
+                        <p data-i18n="devices.led.critical.text">Red, fast blink. A reading passed its critical limit.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
