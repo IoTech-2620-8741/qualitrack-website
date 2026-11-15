@@ -10,6 +10,8 @@ function setMenuOpen(isOpen) {
     const menuButton = document.getElementById('menu-button');
     menuWrapper.classList.toggle('active', isOpen);
     menuButton.setAttribute('aria-expanded', String(isOpen));
+    // Locks page scrolling while the menu (and its dark overlay) is open.
+    document.body.classList.toggle('menu-open', isOpen);
 }
 
 // Switches the mobile menu between open and closed.
@@ -53,6 +55,18 @@ export function setupMobileMenu() {
     for (const link of menuWrapper.querySelectorAll('a')) {
         link.addEventListener('click', closeMenu);
     }
+
+    // Tapping the dark overlay outside the menu also closes it.
+    const menuOverlay = document.querySelector('.header .menu-overlay');
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMenu);
+    }
+
+    // If the screen grows to the desktop layout, make sure the menu state is reset.
+    const desktopQuery = window.matchMedia('(min-width: 1025px)');
+    desktopQuery.addEventListener('change', (event) => {
+        if (event.matches) closeMenu();
+    });
 }
 
 // Inserts the language switcher in the first placeholder and removes any extra ones
