@@ -879,6 +879,280 @@ section {
     font-weight: 500;
 }
 
+/* ============================================
+   IOT DEVICES SECTION (Diseño limpio, sin animaciones)
+   ============================================ */
+
+.devices {
+    background: #f3f4f6; /* Mismo fondo base que el resto del landing */
+    max-width: none;
+    padding: var(--section-padding);
+}
+
+.devices .devices-inner {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devices .devices-inner > .section-button-title,
+.devices .devices-inner > .section-heading-split {
+    text-align: center;
+}
+
+.devices .section-heading-split {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.devices .devices-intro {
+    max-width: 72rem;
+    margin: 0 auto 6rem;
+    font-size: var(--fs-large);
+    color: #64748b; /* Gris de la paleta */
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* --- Tarjeta de dispositivo --- */
+.devices .device {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 4rem;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Solo hover, sin movimiento */
+}
+
+.devices .device:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #0d9488;
+}
+
+/* --- Media (imagen) --- */
+.devices .device-media {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 4rem;
+    background: #ffffff; /* Fondo limpio y blanco, sin gradientes ni cuadrículas */
+    overflow: hidden;
+    min-height: 100%;
+    border-right: 1px solid #e2e8f0;
+}
+
+.devices .device-reverse .device-media {
+    border-right: none;
+    border-left: 1px solid #e2e8f0;
+}
+
+.devices .device-media img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 38rem; /* Un poco más pequeño para que respire mejor */
+    height: auto;
+    /* Sombra suave en la imagen para que resalte en fondo blanco */
+    filter: drop-shadow(0 1rem 1.5rem rgba(15, 23, 42, 0.08));
+}
+
+/* Orden invertido */
+.devices .device-reverse .device-media {
+    order: 2;
+}
+
+.devices .device-reverse .device-body {
+    order: 1;
+}
+
+/* --- Cuerpo del dispositivo --- */
+.devices .device-body {
+    padding: 4.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    text-align: left;
+}
+
+.devices .device-body h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.devices .device-tagline {
+    font-size: var(--fs-large);
+    color: #0f766e; /* Tu verde principal */
+    font-weight: 500;
+    margin-bottom: 2.8rem;
+    line-height: 1.5;
+}
+
+/* Lista de features */
+.devices .device-features {
+    list-style: none;
+    display: grid;
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.devices .device-features li {
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+    font-size: var(--fs-body);
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+.devices .device-features .fas {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+    color: #0d9488;
+    background: #f0fdfa; /* Tu fondo claro verde */
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+}
+
+/* Specs */
+.devices .device-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 3.6rem;
+    padding-top: 2.4rem;
+    border-top: 1px dashed #e2e8f0;
+    margin: 0;
+}
+
+.devices .device-specs > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.devices .device-specs dt {
+    font-size: var(--fs-small);
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+
+.devices .device-specs dd {
+    font-size: var(--fs-body);
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0;
+}
+
+/* --- Leyenda LED --- */
+.devices .led-legend {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 4.5rem 5rem;
+    background: #ffffff; /* Fondo blanco como el resto de tarjetas */
+    border: 1px solid #e2e8f0; /* Borde sutil */
+    border-radius: 2rem;
+    box-shadow: var(--shadow-sm);
+    color: #0f172a;
+    text-align: left;
+    position: relative;
+}
+
+.devices .led-legend h3 {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.8rem;
+}
+
+.devices .led-legend > p {
+    max-width: 78rem;
+    margin-bottom: 3.4rem;
+    font-size: var(--fs-body);
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.devices .led-states {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(26rem, 100%), 1fr));
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.devices .led-states li {
+    display: flex;
+    gap: 1.8rem;
+    align-items: flex-start;
+    padding: 2rem;
+    background: #f8fafc; /* Fondo gris muy suave de tu paleta */
+    border: 1px solid #e2e8f0;
+    border-radius: 1.2rem;
+}
+
+.devices .led-dot {
+    flex: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 0.2rem;
+    border-radius: 50%;
+    /* Se eliminó el box-shadow brillante y la animación ledPulse */
+}
+
+.devices .led-normal {
+    --led: #22c55e;
+}
+
+.devices .led-warning {
+    --led: #facc15;
+}
+
+.devices .led-critical {
+    --led: #ef4444;
+}
+
+.devices .led-states .led-dot {
+    background: var(--led);
+}
+
+.devices .led-states strong {
+    display: block;
+    font-size: var(--fs-large);
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+}
+
+.devices .led-states p {
+    font-size: var(--fs-small);
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .footer {
     background: #0f172a;
     color: #ffffff;
@@ -1144,6 +1418,32 @@ section {
     .home .hero-content-wrapper {
         padding: 0 2rem;
     }
+
+    .devices .device {
+        grid-template-columns: 1fr;
+    }
+
+    .devices .device-reverse .device-media,
+    .devices .device-reverse .device-body {
+        order: 0;
+    }
+
+    .devices .device-media {
+        min-height: 32rem;
+        padding: 3rem;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .devices .device-reverse .device-media {
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .devices .device-body {
+        padding: 4rem 3rem;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1274,6 +1574,24 @@ section {
     .footer {
         padding-bottom: 10rem;
     }
+
+    .devices .devices-intro {
+        margin-bottom: 4rem;
+    }
+
+    .devices .device {
+        margin-bottom: 3rem;
+        border-radius: 1.6rem;
+    }
+
+    .devices .device-body h3 {
+        font-size: 2.4rem;
+    }
+
+    .devices .led-legend {
+        padding: 3rem 2.5rem;
+        border-radius: 1.6rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1311,5 +1629,12 @@ section {
     .reveal-hidden {
         opacity: 1;
         transform: none;
+    }
+
+    .devices .led-dot,
+    .devices .device,
+    .devices .device-media img {
+        animation: none !important;
+        transition: none !important;
     }
 }

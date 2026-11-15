@@ -138,6 +138,151 @@
     </div>
 </section>
 
+<!-- IoT Devices Section -->
+<section class="devices" id="devices-section">
+    <div class="devices-inner">
+        <span class="section-button-title" data-i18n="devices.button">IoT Devices</span>
+        <h2 class="section-heading-split">
+            <span class="highlight-blue" data-i18n="devices.headingLead">Two devices.</span>
+            <span data-i18n="devices.headingMain">One continuous record of your environment.</span>
+        </h2>
+        <p class="devices-intro" data-i18n="devices.intro">
+            QualiTrack watches your laboratory and warehouse with two purpose-built devices. Each one reads, decides and signals on the spot, then sends every reading through an Edge gateway that stores it and forwards it to the cloud when the connection returns.
+        </p>
+
+        <!-- Device 1: Environment Monitor -->
+        <article class="device">
+            <div class="device-media">
+                <img src="assets/images/qualitrack-environment-monitor.png"
+                     width="1200"
+                     height="1200"
+                     loading="lazy"
+                     alt="Sketch of the QualiTrack Environment Monitor: a compact square housing with a status light, a motion sensor lens, air vents and a buzzer grille."
+                     data-i18n-alt="devices.environment.alt">
+            </div>
+            <div class="device-body">
+                <h3 data-i18n="devices.environment.title">Environment Monitor</h3>
+                <p class="device-tagline" data-i18n="devices.environment.tagline">
+                    One per room. It watches air quality and presence across the whole space.
+                </p>
+                <ul class="device-features">
+                    <li>
+                        <i class="fas fa-wind" aria-hidden="true"></i>
+                        <span data-i18n="devices.environment.feature1">Air quality in ppm, measured continuously and checked against your environmental profile.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-walking" aria-hidden="true"></i>
+                        <span data-i18n="devices.environment.feature2">Motion detection records presence in the room without raising an alert.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                        <span data-i18n="devices.environment.feature3">A status light and a buzzer warn people on site as soon as a reading turns critical.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-volume-mute" aria-hidden="true"></i>
+                        <span data-i18n="devices.environment.feature4">The buzzer can be silenced from the app while the light keeps showing the state.</span>
+                    </li>
+                </ul>
+                <dl class="device-specs">
+                    <div>
+                        <dt data-i18n="devices.environment.sizeLabel">Size</dt>
+                        <dd data-i18n="devices.environment.sizeValue">110 × 110 × 45 mm</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="devices.environment.powerLabel">Power</dt>
+                        <dd data-i18n="devices.environment.powerValue">5 V USB-C</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="devices.environment.mountLabel">Mounting</dt>
+                        <dd data-i18n="devices.environment.mountValue">Wall or ceiling, about 2.2 m high</dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+
+        <!-- Device 2: Container Monitor -->
+        <article class="device device-reverse">
+            <div class="device-media">
+                <img src="assets/images/qualitrack-container-monitor.png"
+                     width="1200"
+                     height="1200"
+                     loading="lazy"
+                     alt="Sketch of the QualiTrack Container Monitor: a stainless-steel cabinet with a status light on top, an RFID reader and screen on the door frame, and a fan on the side."
+                     data-i18n-alt="devices.container.alt">
+            </div>
+            <div class="device-body">
+                <h3 data-i18n="devices.container.title">Container Monitor</h3>
+                <p class="device-tagline" data-i18n="devices.container.tagline">
+                    A stainless-steel cabinet that protects the batches stored inside it.
+                </p>
+                <ul class="device-features">
+                    <li>
+                        <i class="fas fa-thermometer-half" aria-hidden="true"></i>
+                        <span data-i18n="devices.container.feature1">Temperature, humidity and light are measured inside the cabinet and checked against the current profile.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-fan" aria-hidden="true"></i>
+                        <span data-i18n="devices.container.feature2">When a reading leaves its range, the cabinet acts on its own: cooling, fan or damper, with no one needing to step in.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-tags" aria-hidden="true"></i>
+                        <span data-i18n="devices.container.feature3">RFID tags on its three removable trays register every batch that enters or leaves.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-tv" aria-hidden="true"></i>
+                        <span data-i18n="devices.container.feature4">A screen on the door frame shows the container, its readings, the active action and the Edge connection.</span>
+                    </li>
+                </ul>
+                <dl class="device-specs">
+                    <div>
+                        <dt data-i18n="devices.container.sizeLabel">Size</dt>
+                        <dd data-i18n="devices.container.sizeValue">450 × 450 × 600 mm</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="devices.container.traysLabel">Trays</dt>
+                        <dd data-i18n="devices.container.traysValue">3 removable, each with an RFID tag</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="devices.container.buildLabel">Build</dt>
+                        <dd data-i18n="devices.container.buildValue">Stainless steel with PU insulation</dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+
+        <!-- LED -->
+        <div class="led-legend">
+            <h3 data-i18n="devices.led.title">Read the state at a glance</h3>
+            <p data-i18n="devices.led.intro">
+                Each device uses a single light. The pattern matters as much as the color, and the screen and the app repeat the same state in text.
+            </p>
+            <ul class="led-states">
+                <li class="led-normal">
+                    <span class="led-dot led-normal" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.normal.name">Normal</strong>
+                        <p data-i18n="devices.led.normal.text">Green, slow pulse. Everything is within range.</p>
+                    </div>
+                </li>
+                <li class="led-warning">
+                    <span class="led-dot led-warning" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.warning.name">Warning</strong>
+                        <p data-i18n="devices.led.warning.text">Yellow, slow blink. A reading left its normal range.</p>
+                    </div>
+                </li>
+                <li class="led-critical">
+                    <span class="led-dot led-critical" aria-hidden="true"></span>
+                    <div>
+                        <strong data-i18n="devices.led.critical.name">Critical</strong>
+                        <p data-i18n="devices.led.critical.text">Red, fast blink. A reading passed its critical limit.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <!-- Benefits Section -->
 <section class="benefits-section" id="benefits-section">
     <span class="section-button-title" data-i18n="benefits.button">Benefits</span>
