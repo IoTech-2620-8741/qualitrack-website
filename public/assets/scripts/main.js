@@ -3,6 +3,7 @@ import { state } from './core/state.js';
 import { loadSharedLayout, setupMobileMenu, setupHeaderShadow } from './ui/layout.js';
 import { setupPlansToggle } from './ui/plans.js';
 import { setupAccordion } from './ui/accordion.js';
+import { setupDevicesToggle } from './ui/devices.js';
 import { setupScrollReveal } from './ui/animations.js';
 import { hideDecorativeIcons } from './utils/a11y.js';
 
@@ -13,6 +14,7 @@ function initPage() {
     setupMobileMenu();
     setupPlansToggle();
     setupAccordion();
+    setupDevicesToggle();
     setupScrollReveal();
     setupHeaderShadow();
     applyTranslations(state.currentLanguageCode);
