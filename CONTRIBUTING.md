@@ -39,7 +39,7 @@ public/
         ├── main.js               # Entry point (ES module): initPage() calls the setup functions
         ├── config/               # constants.js (site root, language codes, plan codes)
         ├── core/                 # dom.js (partials), i18n.js (translations), state.js (current language)
-        ├── ui/                   # layout.js (header, footer, menu), accordion.js, plans.js, animations.js
+        ├── ui/                   # layout.js (header, footer, menu), accordion.js, plans.js, animations.js, devices.js
         ├── utils/                # a11y.js (accessibility helpers)
         └── translations/
             ├── en.js             # English translations (En)
