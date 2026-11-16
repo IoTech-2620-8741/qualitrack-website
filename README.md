@@ -67,7 +67,11 @@ qualitrack-website/
     │   ├── styles/
     │   │   └── style.css              # Global stylesheet + branding variables
     │   ├── scripts/
-    │   │   ├── main.js                # Shared layout, i18n engine, accordion, plans toggle, animations
+    │   │   ├── main.js                # Entry point (ES module): initPage() calls the setup functions
+    │   │   ├── config/                # constants.js (site root, language codes, plan codes)
+    │   │   ├── core/                  # dom.js (partials), i18n.js (translations), state.js (current language)
+    │   │   ├── ui/                    # layout.js (header, footer, menu), accordion.js, plans.js, animations.js, devices.js
+    │   │   ├── utils/                 # a11y.js (accessibility helpers)
     │   │   └── translations/
     │   │       ├── en.js              # English translations (En)
     │   │       └── es.js              # Spanish translations (Es)
@@ -87,17 +91,18 @@ Every push to `main` runs the `Deploy to GitHub Pages` workflow (`.github/workfl
 
 ---
 
-## Version 1.1.0
+## Version 2.0.0
 
-Stable release with changes in project structure and deployment.
+Major release with a redesigned landing page, a new IoT Devices section and a modular scripts structure.
 
-- Responsive landing page with hero, key features, subscription plans, and team sections.
-- Full English (EN) and Spanish (ES) internationalization with a floating language switcher.
-- Plan pricing with monthly/annual billing toggle (15% annual discount).
-- Interactive accordion, scroll-reveal animations, and sticky header.
-- Terms of Service and Privacy Policy (Ley N° 29733) pages.
-- Deployment using Github Workflow plus Github Pages
-- Qualitrack license added.
+- IoT Devices section with the Environment Monitor, the Container Monitor and their LED status indicators.
+- Product and About Us videos.
+- Design aligned with the QualiTrack style guide and the web application, including the smallest phones.
+- Mobile menu overlay and device toggle.
+- Scripts split into ES modules (`config/`, `core/`, `ui/`, `utils/`).
+- Keyboard and screen reader improvements for the accordion and the navigation.
+
+See [CHANGELOG.md](CHANGELOG.md) for the full list of changes.
 
 ---
 

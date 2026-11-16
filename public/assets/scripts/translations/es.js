@@ -89,6 +89,7 @@ const Es = {
         "home": "Inicio",
         "features": "Características",
         "benefits": "Beneficios",
+        "devices": "Dispositivos IoT",
         "about": "Nosotros",
         "plans": "Planes",
         "signin": "Iniciar Sesión",
@@ -139,6 +140,58 @@ const Es = {
             "text": "Monitorea tasas de conformidad de lotes, tendencias de desviaciones y tiempos de liberación. Identifica patrones de falla recurrentes y prioriza acciones correctivas. Genera reportes listos para inspección regulatoria con un solo clic."
         }
     },
+    "devices": {
+        "button": "Dispositivos IoT",
+        "headingLead": "Dos dispositivos.",
+        "headingMain": "Un registro continuo de tu ambiente.",
+        "intro": "QualiTrack vigila tu laboratorio y tu almacén con dos dispositivos diseñados para ello. Cada uno mide, decide y avisa en el lugar, y envía cada lectura a través de un gateway Edge que la guarda y la reenvía a la nube cuando vuelve la conexión.",
+        "environment": {
+            "title": "Monitor de Ambiente",
+            "tagline": "Uno por sala. Vigila la calidad del aire y la presencia en todo el espacio.",
+            "feature1": "Calidad del aire en ppm, medida de forma continua y contrastada con tu perfil ambiental.",
+            "feature2": "La detección de movimiento registra la presencia en la sala sin generar una alerta.",
+            "feature3": "Una luz de estado y un buzzer avisan a las personas en el lugar apenas una lectura se vuelve crítica.",
+            "feature4": "El buzzer se puede silenciar desde la app y la luz sigue mostrando el estado.",
+            "alt": "Boceto del Monitor de Ambiente de QualiTrack: una carcasa cuadrada compacta con luz de estado, lente del sensor de movimiento, rejillas de aire y salida del buzzer.",
+            "sizeLabel": "Tamaño",
+            "sizeValue": "110 × 110 × 45 mm",
+            "powerLabel": "Alimentación",
+            "powerValue": "5 V por USB-C",
+            "mountLabel": "Montaje",
+            "mountValue": "Pared o techo, a unos 2,2 m de altura"
+        },
+        "container": {
+            "title": "Monitor de Contenedor",
+            "tagline": "Un gabinete de acero inoxidable que protege los lotes guardados en su interior.",
+            "feature1": "La temperatura, la humedad y la luz se miden dentro del gabinete y se contrastan con el perfil vigente.",
+            "feature2": "Cuando una lectura sale de su rango, el gabinete actúa por sí solo: enfría, activa el ventilador o abre la compuerta, sin que nadie tenga que intervenir.",
+            "feature3": "Las etiquetas RFID de sus tres bandejas extraíbles registran cada lote que entra o sale.",
+            "feature4": "Una pantalla en el marco de la puerta muestra el contenedor, sus lecturas, la acción activa y la conexión con el Edge.",
+            "alt": "Boceto del Monitor de Contenedor de QualiTrack: un gabinete de acero inoxidable con luz de estado arriba, lector RFID y pantalla en el marco de la puerta, y un ventilador en el lateral.",
+            "sizeLabel": "Tamaño",
+            "sizeValue": "450 × 450 × 600 mm",
+            "traysLabel": "Bandejas",
+            "traysValue": "3 extraíbles, cada una con etiqueta RFID",
+            "buildLabel": "Construcción",
+            "buildValue": "Acero inoxidable con aislamiento PU"
+        },
+        "led": {
+            "title": "Lee el estado de un vistazo",
+            "intro": "Cada dispositivo usa una sola luz. El patrón importa tanto como el color, y la pantalla y la app repiten el mismo estado con texto.",
+            "normal": {
+                "name": "Normal",
+                "text": "Verde, pulso lento. Todo está dentro del rango."
+            },
+            "warning": {
+                "name": "Advertencia",
+                "text": "Amarillo, parpadeo lento. Una lectura salió de su rango normal."
+            },
+            "critical": {
+                "name": "Crítico",
+                "text": "Rojo, parpadeo rápido. Una lectura superó su límite crítico."
+            }
+        }
+    },
     "benefits": {
         "button": "Beneficios",
         "headingLead": "La Ventaja de QualiTrack:",
@@ -165,10 +218,21 @@ const Es = {
         "headingLead": "QualiTrack:",
         "headingMain": "Transformando la Gestión de Calidad Farmacéutica con IoT y Cumplimiento Normativo",
         "vision": "QualiTrack nace con una visión clara: digitalizar y transformar la supervisión de los procesos de fabricación en laboratorios farmacéuticos. Combinamos la solidez de una arquitectura de software empresarial con la innovación del Internet de las Cosas (IoT), garantizando que las instituciones de salud cumplan rigurosamente con las Buenas Prácticas de Manufactura (BPM) exigidas por entidades como DIGEMID.",
+        "visionTitle": "Nuestra Visión",
+        "missionTitle": "Nuestra Misión",
         "mission": "Somos una plataforma especializada en cumplimiento regulatorio — un escudo contra fallas de producción y un compromiso hacia una nueva era de manufactura farmacéutica inteligente y transparente.",
-        "iotIntegration": "Integración IoT: Captura automática de pH, temperatura y presión desde equipos industriales.",
-        "traceability": "Trazabilidad Inmutable: Registros a prueba de manipulación con firmas digitales y auditorías completas.",
-        "compliance": "Cumplimiento Regulatorio: Soporte nativo para requisitos BPM de DIGEMID, normas ISO y principios de Integridad de Datos."
+        "iotIntegration": {
+            "title": "Integridad de Datos",
+            "text": "Registros inmutables y auditables que cumplen con los requisitos regulatorios internacionales."
+        },
+        "traceability": {
+            "title": "Integración IoT",
+            "text": "Conexión directa con autoclaves, medidores de pH y sensores para la captura automática de variables."
+        },
+        "compliance": {
+            "title": "Cumplimiento Normativo",
+            "text": "Informes de auditoría inmutables listos para inspecciones de DIGEMID."
+        }
     },
     "team": {
         "heading": "Nuestro Equipo",

@@ -89,6 +89,7 @@ const En = {
         "home": "Home",
         "features": "Features",
         "benefits": "Benefits",
+        "devices": "IoT Devices",
         "about": "About Us",
         "plans": "Plans",
         "signin": "Sign In",
@@ -139,6 +140,58 @@ const En = {
                 "text": "Track batch conformance rates, deviation trends, and release times. Identify recurring failure patterns and prioritize corrective actions. Generate regulatory-ready reports for DIGEMID inspections with a single click."
             }
         },
+    "devices": {
+        "button": "IoT Devices",
+        "headingLead": "Two devices.",
+        "headingMain": "One continuous record of your environment.",
+        "intro": "QualiTrack watches your laboratory and warehouse with two purpose-built devices. Each one reads, decides and signals on the spot, then sends every reading through an Edge gateway that stores it and forwards it to the cloud when the connection returns.",
+        "environment": {
+            "title": "Environment Monitor",
+            "tagline": "One per room. It watches air quality and presence across the whole space.",
+            "feature1": "Air quality in ppm, measured continuously and checked against your environmental profile.",
+            "feature2": "Motion detection records presence in the room without raising an alert.",
+            "feature3": "A status light and a buzzer warn people on site as soon as a reading turns critical.",
+            "feature4": "The buzzer can be silenced from the app while the light keeps showing the state.",
+            "alt": "Sketch of the QualiTrack Environment Monitor: a compact square housing with a status light, a motion sensor lens, air vents and a buzzer grille.",
+            "sizeLabel": "Size",
+            "sizeValue": "110 × 110 × 45 mm",
+            "powerLabel": "Power",
+            "powerValue": "5 V USB-C",
+            "mountLabel": "Mounting",
+            "mountValue": "Wall or ceiling, about 2.2 m high"
+        },
+        "container": {
+            "title": "Container Monitor",
+            "tagline": "A stainless-steel cabinet that protects the batches stored inside it.",
+            "feature1": "Temperature, humidity and light are measured inside the cabinet and checked against the current profile.",
+            "feature2": "When a reading leaves its range, the cabinet acts on its own: cooling, fan or damper, with no one needing to step in.",
+            "feature3": "RFID tags on its three removable trays register every batch that enters or leaves.",
+            "feature4": "A screen on the door frame shows the container, its readings, the active action and the Edge connection.",
+            "alt": "Sketch of the QualiTrack Container Monitor: a stainless-steel cabinet with a status light on top, an RFID reader and screen on the door frame, and a fan on the side.",
+            "sizeLabel": "Size",
+            "sizeValue": "450 × 450 × 600 mm",
+            "traysLabel": "Trays",
+            "traysValue": "3 removable, each with an RFID tag",
+            "buildLabel": "Build",
+            "buildValue": "Stainless steel with PU insulation"
+        },
+        "led": {
+            "title": "Read the state at a glance",
+            "intro": "Each device uses a single light. The pattern matters as much as the color, and the screen and the app repeat the same state in text.",
+            "normal": {
+                "name": "Normal",
+                "text": "Green, slow pulse. Everything is within range."
+            },
+            "warning": {
+                "name": "Warning",
+                "text": "Yellow, slow blink. A reading left its normal range."
+            },
+            "critical": {
+                "name": "Critical",
+                "text": "Red, fast blink. A reading passed its critical limit."
+            }
+        }
+    },
         "benefits": {
             "button": "Benefits",
             "headingLead": "The QualiTrack Advantage:",
@@ -166,9 +219,20 @@ const En = {
             "headingMain": "Transforming Pharmaceutical Quality Management with IoT and Compliance",
             "vision": "QualiTrack was born with a clear vision: to digitize and transform the supervision of manufacturing processes in pharmaceutical laboratories. We combine the robustness of enterprise software architecture with IoT innovation, ensuring health institutions rigorously comply with Good Manufacturing Practices (GMP) required by regulators like DIGEMID.",
             "mission": "We are a specialized platform for regulatory compliance — a shield against production failures and a commitment to a new era of intelligent and transparent pharmaceutical manufacturing.",
-            "iotIntegration": "IoT Integration: Automated capture of pH, temperature, and pressure from industrial equipment.",
-            "traceability": "Immutable Traceability: Tamper-proof records with digital signatures and complete audit trails.",
-            "compliance": "Regulatory Compliance: Native support for DIGEMID BPM requirements, ISO standards, and Data Integrity principles."
+            "visionTitle": "Our Vision",
+            "missionTitle": "Our Misión",
+            "iotIntegration": {
+                "title": "Data Integrity",
+                "text": "Immutable and auditable records that comply with international regulatory requirements."
+            },
+            "traceability": {
+                "title": "IoT Integration",
+                "text": "Direct connection to autoclaves, pH meters, and sensors for automatic variable capture."
+            },
+            "compliance": {
+                "title": "Regulatory Compliance",
+                "text": "Immutable audit reports ready for DIGEMID inspections."
+            }
         },
         "team": {
             "heading": "Our Team",
